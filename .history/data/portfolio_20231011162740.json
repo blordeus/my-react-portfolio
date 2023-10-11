@@ -1,0 +1,121 @@
+{
+  "name": "Bryan Lordeus",
+  "headerTaglineOne": "Hello,",
+  "headerTaglineTwo": "I'm Bryan Lordeus - creative",
+  "headerTaglineThree": "designer and developer",
+  "headerTaglineFour": " based in Orlando, Florida.",
+  "showCursor": true,
+  "showBlog": false,
+  "darkMode": true,
+  "showResume": true,
+  "socials": [
+    { "id": "1", "title": "Github", "link": "https://github.com/blordeus" },
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/bryanlordeus/"
+    },
+    {
+      "id": "3",
+      "title": "Twitter",
+      "link": "https://twitter.com/bryancreates"
+    },
+    { "id": "5", "title": "Email", "link": "mailto:imaginedbybryan@gmail.com" }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "To-Do App",
+      "description": "HTML | CSS | JavaScript | React",
+      "imageSrc": "https://i.ibb.co/H4kdPx3/todo-app.png",
+      "url": "https://blordeus.github.io/to-do-app/",
+      "sourceURL": "https://github.com/blordeus/to-do-app"
+    },
+    {
+      "id": "2",
+      "title": "Password Generator",
+      "description": "HTML | CSS | JavaScript ",
+      "imageSrc": "https://i.ibb.co/zm2bNfB/Fire-Shot-Capture-007-Frontend-Mentor-Password-generator-app-blordeus-github-io.png",
+      "url": "https://blordeus.github.io/password-generator-app/",
+      "sourceURL": "https://github.com/blordeus/password-generator-app"
+    },
+    {
+      "id": "3",
+      "title": "Newsletter Sign-Up Form",
+      "description": "HTML | CSS | JavaScript ",
+      "imageSrc": "https://i.ibb.co/mHyDWPc/Fire-Shot-Capture-006-Frontend-Mentor-Newsletter-sign-up-form-with-success-message-blordeus-github-i.png",
+      "url": "https://blordeus.github.io/newsletter-sign-up-with-success-message-main/",
+      "sourceURL": "https://github.com/blordeus/newsletter-sign-up-with-success-message-main"
+    },
+    {
+      "id": "4",
+      "title": "Ping Coming Soon Page",
+      "description": "HTML | CSS | JavaScript ",
+      "imageSrc": "https://i.ibb.co/hCgz15K/Fire-Shot-Capture-009-Frontend-Mentor-Ping-coming-soon-page-blordeus-github-io.png",
+      "url": "https://blordeus.github.io/ping-coming-soon-page-master/",
+      "sourceURL": "https://github.com/blordeus/ping-coming-soon-page-master"
+    },
+    {
+      "id": "5",
+      "title": "Notifications Page",
+      "description": "HTML | CSS | JavaScript ",
+      "imageSrc": "https://i.ibb.co/t801GCj/Fire-Shot-Capture-010-Frontend-Mentor-Notifications-page-blordeus-github-io.png",
+      "url": "https://blordeus.github.io/notifications-page-main/",
+      "sourceURL": "https://github.com/blordeus/notifications-page-main"
+    },
+    {
+      "id": "6",
+      "title": "Expenses Chart",
+      "description": "HTML | CSS | JavaScript",
+      "imageSrc": "https://i.ibb.co/smyCNPY/Fire-Shot-Capture-011-Frontend-Mentor-Expenses-chart-component-blordeus-github-io.png",
+      "url": "https://blordeus.github.io/expenses-chart-component-main/",
+      "sourceURL": "https://github.com/blordeus/expenses-chart-component-main"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "Front-End Development",
+      "description": "We help with the creation and development of website ideas, with particular focus on their visual appearance."
+    },
+    {
+      "id": "2",
+      "title": "Graphic Design",
+      "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+    },
+    {
+      "id": "3",
+      "title": "Copy and Content Writing",
+      "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+    },
+  ],
+  "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "resume": {
+    "tagline": "I'm a software engineer, product designer.",
+    "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+    "experiences": [
+      {
+        "id": "1",
+        "dates": "March 2022 - Present",
+        "type": "Full Time",
+        "position": "Frontend Engineer at X",
+        "bullets": "Bullet One, Bullet Two"
+      },
+      {
+        "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
+        "dates": "July 2020 - March 2022",
+        "type": "Full Time",
+        "position": "Frontend Engineer at X",
+        "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+      }
+    ],
+    "education": {
+      "universityName": "University X",
+      "universityDate": "2016-2020",
+      "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    },
+    "languages": ["Javascript", "HTML5", "CSS"],
+    "frameworks": ["React", "NodeJs", "Bootstrap", "Tailwindcss", "Chakra Ui"],
+    "others": ["Figma", "AdobeXD"]
+  }
+}
