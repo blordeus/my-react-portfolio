@@ -30,14 +30,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 {name}
               </h1> */}
               <img
-                className="h-6"
-                src={`/images/${
-                  theme === "dark"
-                    ? "my-logo-inverted-01.svg"
-                    : "my-logo-01.svg"
-                }`}
-                onClick={() => router.push("/")}
-              ></img>
+                      className="h-6"
+                      src={`/images/${
+                        theme === "dark" ? "my-logo-inverted-01.svg" : "my-logo-01.svg"
+                      }`}
+                      onClick={() => router.push("/")}
+                    ></img>
 
               <div className="flex items-center">
                 {data.darkMode && (
@@ -94,20 +92,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() =>
-                      window.open("mailto:imaginedbybryan@gmail.com")
-                    }
+                    onClick={() => window.open("mailto:imaginedbybryan@gmail.com")}
                   >
                     Contact
                   </Button>
 
-                  <Button
-                    onClick={() =>
-                      window.open("https://bryanlordeus.myportfolio.com")
-                    }
-                  >
-                    Other Work
-                  </Button>
+                  <Button onClick={() => window.open("https://bryanlordeus.myportfolio.com")}>
+              Other Work
+            </Button>
                 </div>
               ) : (
                 <div className="grid grid-cols-1">
@@ -127,20 +119,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() =>
-                      window.open("mailto:imaginedbybryan@gmail.com")
-                    }
+                    onClick={() => window.open("mailto:imaginedbybryan@gmail.com")}
                   >
                     Contact
                   </Button>
 
-                  <Button
-                    onClick={() =>
-                      window.open("https://bryanlordeus.myportfolio.com")
-                    }
-                  >
-                    Other Work
-                  </Button>
+                  <Button onClick={() => window.open("https://bryanlordeus.myportfolio.com")}>
+              Other Work
+            </Button>
                 </div>
               )}
             </Popover.Panel>
@@ -153,12 +139,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         } dark:text-white top-0 z-10 tablet:flex`}
       >
         <img
-          className="h-12"
-          src={`/images/${
-            theme === "dark" ? "my-logo-inverted-01.svg" : "my-logo-01.svg"
-          }`}
-          onClick={() => router.push("/")}
-        ></img>
+                      className="h-12"
+                      src={`/images/${
+                        theme === "dark" ? "my-logo-inverted-01.svg" : "my-logo-01.svg"
+                      }`}
+                      onClick={() => router.push("/")}
+                    ></img>
         {!isBlog ? (
           <div className="flex">
             <Button onClick={handleWorkScroll}>Work</Button>
@@ -175,16 +161,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button
-              onClick={() => window.open("mailto:imaginedbybryan@gmail.com")}
-            >
+            <Button onClick={() => window.open("mailto:imaginedbybryan@gmail.com")}>
               Contact
             </Button>
-            <Button
-              onClick={() =>
-                window.open("https://bryanlordeus.myportfolio.com")
-              }
-            >
+            <Button onClick={() => window.open("https://bryanlordeus.myportfolio.com")}>
               Other Work
             </Button>
             {mounted && theme && data.darkMode && (
@@ -213,9 +193,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button
-              onClick={() => window.open("mailto:imaginedbybryan@gmail.com")}
-            >
+            <Button onClick={() => window.open("mailto:imaginedbybryan@gmail.com")}>
               Contact
             </Button>
 
