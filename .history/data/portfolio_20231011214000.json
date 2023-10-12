@@ -121,10 +121,10 @@
     "education": {
       "universityName": "University of South Florida",
       "universityDate": "2014-2016",
-      "universityPara": "English, with a concentration in Professional Writing, Rhetoric, and Technology" 
+      "universityPara": "English, with a concentration in Professional Writing, Rhetoric, and Technology", ""
     },
     "languages": ["Javascript", "HTML5", "CSS"],
     "frameworks": ["React", "Bootstrap", "Tailwindcss", "Chakra Ui"],
-    "others": ["Figma", "Sketch", "WordPress", "Squarespace", "Photoshop", "InDesign", "Illustrator"]
+    "others": ["Figma", "Sketch", "WordPress", "Squarespace"]
   }
 }

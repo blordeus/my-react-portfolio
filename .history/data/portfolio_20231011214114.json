@@ -125,6 +125,6 @@
     },
     "languages": ["Javascript", "HTML5", "CSS"],
     "frameworks": ["React", "Bootstrap", "Tailwindcss", "Chakra Ui"],
-    "others": ["Figma", "Sketch", "WordPress", "Squarespace", "Photoshop", "InDesign", "Illustrator"]
+    "others": ["Figma", "Sketch", "WordPress", "Squarespace",]
   }
 }

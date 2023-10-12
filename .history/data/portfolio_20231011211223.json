@@ -87,44 +87,30 @@
   "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   "resume": {
     "tagline": "Front End Developer | Graphic Designer | Writer",
-    "description": "Experienced front-end developer and web designer with 4 years of expertise in crafting and editing interactive websites using HTML, CSS, JavaScript, and React. Proficient in graphic design and writing, I am dedicated to creating seamless user experiences and bringing websites to life with a keen eye for detail and creativity.",
+    "description": "Over the past 4 years, I have used my extensive knowledge of various softwares and curioI have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
     "experiences": [
       {
-        "id": "d495c23b-4f65-479a-9b8a-cfbc1c089724",
-        "dates": "October 2021 - October 2022",
-        "type": "Freelance",
-        "position": "Copywriter at Purple Tree Coaching & Consulting",
-        "bullets": "Proofread content and wrote copy for social media channels and e-marketing materials., Enhanced online visibility through SEO copywriting."
-      },
-      {
         "id": "1",
-        "dates": "January 2021 - Present",
-        "type": "Freelance",
-        "position": "Web Designer at Brookins Goldens",
-        "bullets": "Edited the client's website using Squarespace.,  Optimizing website performance and improving user experience."
+        "dates": "March 2022 - Present",
+        "type": "Full Time",
+        "position": "Frontend Engineer at X",
+        "bullets": "Bullet One, Bullet Two"
       },
       {
         "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
-        "dates": "March 2021 - September 2022",
-        "type": "Freelance",
-        "position": "Content Creator at Riverside Church",
-        "bullets": "Developed copy and blog content for the website., Created visual content for Instagram and Facebook accounts."
-      },
-      {
-        "id": "d495c23b-4f65-479a-9b8a-cfbc1c089726",
-        "dates": "December 2019 - March 2021",
-        "type": "Freelance",
-        "position": "Web & App Designer at Riverside Church",
-        "bullets": "Prevented website crashes and errors by updating the front-end code and troubleshooting issues using HTML and CSS., Designed engaging and responsive landing pages using WordPress."
+        "dates": "July 2020 - March 2022",
+        "type": "Full Time",
+        "position": "Frontend Engineer at X",
+        "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
       }
     ],
     "education": {
       "universityName": "University of South Florida",
       "universityDate": "2014-2016",
-      "universityPara": "English, with a concentration in Professional Writing, Rhetoric, and Technology" 
+      "universityPara": "English, with a concentration in Professional Writing, Rhetoric, and Technology"
     },
     "languages": ["Javascript", "HTML5", "CSS"],
     "frameworks": ["React", "Bootstrap", "Tailwindcss", "Chakra Ui"],
-    "others": ["Figma", "Sketch", "WordPress", "Squarespace", "Photoshop", "InDesign", "Illustrator"]
+    "others": ["Figma", "Sketch"]
   }
 }

@@ -91,10 +91,10 @@
     "experiences": [
       {
         "id": "d495c23b-4f65-479a-9b8a-cfbc1c089724",
-        "dates": "October 2021 - October 2022",
+        "dates": "March 2021 - September 2022",
         "type": "Freelance",
-        "position": "Copywriter at Purple Tree Coaching & Consulting",
-        "bullets": "Proofread content and wrote copy for social media channels and e-marketing materials., Enhanced online visibility through SEO copywriting."
+        "position": "Copywriter at Riverside Church",
+        "bullets": "Developed copy and blog content for the website., Created visual content for Instagram and Facebook accounts."
       },
       {
         "id": "1",
@@ -121,10 +121,10 @@
     "education": {
       "universityName": "University of South Florida",
       "universityDate": "2014-2016",
-      "universityPara": "English, with a concentration in Professional Writing, Rhetoric, and Technology" 
+      "universityPara": "English, with a concentration in Professional Writing, Rhetoric, and Technology"
     },
     "languages": ["Javascript", "HTML5", "CSS"],
     "frameworks": ["React", "Bootstrap", "Tailwindcss", "Chakra Ui"],
-    "others": ["Figma", "Sketch", "WordPress", "Squarespace", "Photoshop", "InDesign", "Illustrator"]
+    "others": ["Figma", "Sketch", "WordPress", "Squarespace"]
   }
 }
