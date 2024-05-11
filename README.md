@@ -1,4 +1,4 @@
-### Live - https://react-portfolio-template.netlify.app/
+### Live - https://my-react-portfolio-six-alpha.vercel.app/
 
 ### Features - 
 
