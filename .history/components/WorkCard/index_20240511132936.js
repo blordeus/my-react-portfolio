@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 
 const WorkCard = ({ img, name, description, onClick, sourceURL}) => {
 const handleSourceClick = () => {
