@@ -16,7 +16,7 @@ const handleSourceClick = () => {
         <img
           alt={data.name}
           className="h-full w-full object-cover hover:scale-110 transition-all ease-out duration-300"
-          src={data.img}
+          src={img}
           onClick={onClick}
         ></img>
       </div>
