@@ -17,7 +17,7 @@ import data from "../data/portfolio.json";
 export default function Home() {
   // Ref
   const workRef = useRef();
-  // const aboutRef = useRef();
+  const aboutRef = useRef();
   const serviceRef = useRef();
   const textOne = useRef();
   const textTwo = useRef();
@@ -33,13 +33,13 @@ export default function Home() {
     });
   };
 
-  // const handleAboutScroll = () => {
-  //   window.scrollTo({
-  //     top: aboutRef.current.offsetTop,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // };
+  const handleAboutScroll = () => {
+    window.scrollTo({
+      top: aboutRef.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   const handleServiceScroll = () => {
     window.scrollTo({
       top: serviceRef.current.offsetTop,
@@ -69,7 +69,7 @@ export default function Home() {
       <div className="container mx-auto mb-10">
         <Header
           handleWorkScroll={handleWorkScroll}
-          handleServiceScroll={handleServiceScroll}
+          handleServiceScroll={handleAboutScroll}
         />
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
