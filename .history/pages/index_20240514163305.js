@@ -126,7 +126,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="laptop:mt-30 p-2 laptop:p-0 mt-32" ref={serviceRef}>
+        <div className="laptop:mt-30 p-2 laptop:p-0 mt-32" ref={serviceR}>
           <h1 className="tablet:m-10 text-6xl text-bold text-center ">Services</h1>
           <div className="mt-24">
             <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-3 gap-6">
