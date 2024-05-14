@@ -1,6 +1,6 @@
 import React from "react";
 
-const WorkCard = ({ img, name, description, onClick, sourceURL, showSource}) => {
+const WorkCard = ({ img, name, description, onClick, sourceURL, showSou}) => {
 const handleSourceClick = () => {
   window.open(sourceURL);
 };
@@ -20,7 +20,7 @@ const handleSourceClick = () => {
         ></img>
       </div>
         <h1 className="mt-5 text-3xl font-medium" onClick={onClick}>
-          {name ? name : "Project Name"} {showSource && (<span onClick={handleSpanClick}>| Source</span>)}
+          {name ? name : "Project Name"}  | <span onClick={handleSpanClick}> Source</span>
         </h1>
       <h2 className="text-xl opacity-50">
         {description ? description : "Description"}

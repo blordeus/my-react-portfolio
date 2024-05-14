@@ -111,7 +111,7 @@ export default function Home() {
                 name={project.title}
                 description={project.description}
                 sourceURL={project.sourceURL}
-                showSource={project.showSource}
+                sho
                 onClick={() => window.open(project.url)}
               />
             ))}
