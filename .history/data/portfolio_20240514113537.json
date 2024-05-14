@@ -20,27 +20,11 @@
   "projects": [
     {
       "id": "1a",
-      "title": "CEDAR",
-      "description": "Squarespace",
-      "imageSrc": "https://images2.imgbox.com/88/c4/FoX7QsED_o.png",
-      "url": "https://www.learnwithcedar.com/",
-      "sourceUrl": "https://www.learnwithcedar.com/"
-    },
-    {
-      "id": "1b",
-      "title": "Brookins Goldens",
-      "description": "Squarespace",
-      "imageSrc": "https://images2.imgbox.com/94/c5/iYSRKmvG_o.png",
-      "url": "https://brookinsgoldens.com/",
-      "sourceUrl": "https://brookinsgoldens.com/"
-    },
-    {
-      "id": "1c",
-      "title": "Riverside Church",
-      "description": "WordPress",
-      "imageSrc": "https://images2.imgbox.com/db/b3/GuA70PnQ_o.png",
-      "url": "https://954church.com/",
-      "sourceUrl": "https://954church.com/"
+      "title": "To-Do App",
+      "description": "HTML | CSS | JavaScript | React",
+      "imageSrc": "https://images2.imgbox.com/9d/d5/IW6d2cLU_o.png",
+      "url": "https://blordeus.github.io/to-do-app/",
+      "sourceURL": "https://github.com/blordeus/to-do-app"
     },
     {
       "id": "1",
