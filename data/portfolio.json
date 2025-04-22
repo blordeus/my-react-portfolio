@@ -10,12 +10,9 @@
   "showResume": false,
   "socials": [
     { "id": "1", "title": "Github", "link": "https://github.com/blordeus" },
-    {
-      "id": "2",
-      "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/bryanlordeus/"
-    },
-    { "id": "3", "title": "Email", "link": "mailto:imaginedbybryan@gmail.com" }
+    { "id": "2", "title": "LinkedIn", "link": "https://www.linkedin.com/in/bryanlordeus/"},
+    { "id": "3", "title": "Email", "link": "mailto:imaginedbybryan@gmail.com" },
+    { "id": "4", "title": "Carrd", "link": "https://bryanlordeus.carrd.co/" }
   ],
   "projects": [
     {
