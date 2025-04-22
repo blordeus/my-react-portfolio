@@ -49,7 +49,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                     <img
                       className="h-6"
                       src={`/images/${
-                        theme === "dark" ? "moon.svg" : "sun.svg"
+                        theme === "dark" ? "sun.svg" : "moon.svg"
                       }`}
                     ></img>
                   </Button>
