@@ -19,6 +19,15 @@
   ],
   "projects": [
     {
+      "id": "1-1",
+      "title": "Broward House",
+      "description": "WordPress",
+      "imageSrc": "https://thumbs2.imgbox.com/c4/04/zM3IiYh9_t.png",
+      "url": "https://www.browardhouse.org/",
+      "sourceUrl": "https://www.browardhouse.org/",
+      "showSource": false
+    },
+    {
       "id": "1a",
       "title": "CEDAR",
       "description": "Wix",
