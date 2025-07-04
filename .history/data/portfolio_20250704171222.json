@@ -146,7 +146,7 @@
     {
       "id": "1",
       "title": "Front-End Development",
-      "description": "I can assist with the creation and development of website ideas using a variety of programming languages and website builders."
+      "description": "I can assist with the creation and development of website ideas using a variety of programming languages, with a particular focus on the user interface and implementing functionality where necessary."
     },
     {
       "id": "2",
@@ -156,7 +156,7 @@
     {
       "id": "3",
       "title": "UI/UX Design",
-      "description": "I create intuitive and engaging interfaces, optimizing user experience to enhance overall product satisfaction."
+      "description": "With a focus on user-centered design, I create intuitive and engaging interfaces, optimizing user experience through wireframing, prototyping, and usability testing to enhance overall product satisfaction."
     }
   ],
   "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",

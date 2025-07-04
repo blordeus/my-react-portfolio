@@ -24,7 +24,7 @@ const WorkCard = ({ img, name, description, onClick, sourceURL, showSource }) =>
           />
         )}
       </div>
-      <h1 className="mt-5 text-2xl font-medium text-gray-800 dark:text-gray-200" onClick={onClick}>
+      <h1 className="mt-5 text-xl font-medium text-gray-800 dark:text-gray-200" onClick={onClick}>
         {name ? name : "Project Name"}
         {showSource && (
           <span

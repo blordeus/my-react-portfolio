@@ -110,17 +110,17 @@ export default function Home() {
           </p>
         </div> */}
         
-        <div className="mt-24 laptop:mt-20 p-2 laptop:p-0" ref={workRef}>
+        <div className="mt-24 laptop:mt-16 p-2 laptop:p-0" ref={workRef}>
           <h1 className="text-6xl text-bold text-center">Work</h1>
           <div className="mt-5 laptop:mt-10">
             <ProjectGallery projects={data.projects} /> {/* Replace grid with ProjectGallery */}
           </div>
         </div>
 
-        <div className="laptop:mt-20 p-2 laptop:p-0 mt-24" ref={serviceRef}>
+        <div className="laptop:mt-30 p-2 laptop:p-0 mt-32" ref={serviceRef}>
           <h1 className="tablet:m-10 text-6xl text-bold text-center ">Services</h1>
-          <div className="mt-4 laptop:mt-8">
-            <div className="mt-4 tablet:m-10 grid grid-cols-1 laptop:grid-cols-3 gap-6">
+          <div className="mt-24">
+            <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-3 gap-6">
               {data.services.map((service, index) => (
                 <ServiceCard
                   key={index}
