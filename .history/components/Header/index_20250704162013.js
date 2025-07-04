@@ -46,7 +46,8 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                 style={{ cursor: "pointer" }}
               />
 
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2">
+
                 {data.darkMode && (
                   <Button
                     onClick={() =>
@@ -63,33 +64,6 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                     />
                   </Button>
                 )}
-
-                <Popover.Button>
-                  <Image
-                    className="h-5"
-                    src={`/images/${
-                      !open
-                        ? theme === "dark"
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : theme === "light"
-                        ? "cancel.svg"
-                        : "cancel-white.svg"
-                    }`}
-                    alt={
-                      !open
-                        ? theme === "dark"
-                          ? "Open menu (white icon)"
-                          : "Open menu"
-                        : theme === "light"
-                        ? "Close menu"
-                        : "Close menu (white icon)"
-                    }
-                    width={26}
-                    height={26}
-                    priority
-                  />
-                </Popover.Button>
               </div>
             </div>
             <Popover.Panel

@@ -20,7 +20,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
 
   return (
     <>
-      <Popover className="block tablet:hidden mt-5">
+      <Popover className=" tablet:hidden mt-5">
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
@@ -46,7 +46,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                 style={{ cursor: "pointer" }}
               />
 
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center">
                 {data.darkMode && (
                   <Button
                     onClick={() =>
@@ -55,10 +55,10 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                   >
                     <Image
                       className="h-6"
-                      src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                      alt={theme === "dark" ? "Moon icon" : "Sun icon"}
-                      width={64}
-                      height={40} 
+                      src={`/images/${theme === "dark" ? "sun.svg" : "moon.svg"}`}
+                      alt={theme === "dark" ? "Sun icon" : "Moon icon"}
+                      width={28}
+                      height={28} 
                       priority
                     />
                   </Button>

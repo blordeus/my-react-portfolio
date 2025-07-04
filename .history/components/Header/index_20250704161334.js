@@ -30,8 +30,12 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
               >
                 {name}
               </h1> */}
+              
               <Image
                 className="h-6"
+                onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
                 src={`/images/${
                   theme === "dark"
                     ? "my-logo-inverted-04.svg"
@@ -46,24 +50,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                 style={{ cursor: "pointer" }}
               />
 
-              <div className="flex items-center space-x-3">
-                {data.darkMode && (
-                  <Button
-                    onClick={() =>
-                      setTheme(theme === "dark" ? "light" : "dark")
-                    }
-                  >
-                    <Image
-                      className="h-6"
-                      src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                      alt={theme === "dark" ? "Moon icon" : "Sun icon"}
-                      width={64}
-                      height={40} 
-                      priority
-                    />
-                  </Button>
-                )}
-
+              <div className="flex items-center space-x-2">
                 <Popover.Button>
                   <Image
                     className="h-5"
@@ -90,6 +77,23 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                     priority
                   />
                 </Popover.Button>
+
+                {data.darkMode && (
+                  <Button
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
+                  >
+                    <Image
+                      className="h-6"
+                      src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                      alt={theme === "dark" ? "Moon icon" : "Sun icon"}
+                      width={64}
+                      height={40} 
+                      priority
+                    />
+                  </Button>
+                )}
               </div>
             </div>
             <Popover.Panel

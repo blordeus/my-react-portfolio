@@ -38,15 +38,14 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                     : "my-logo-04.svg"
                 }`}
                 alt={theme === "dark" ? "My logo inverted" : "My logo"}
-                //set sizes for Mobile
-                width={70}
-                height={70}
+                width={96}
+                height={24}
                 priority
                 onClick={() => router.push("/")}
                 style={{ cursor: "pointer" }}
               />
 
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center">
                 {data.darkMode && (
                   <Button
                     onClick={() =>
@@ -55,10 +54,10 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                   >
                     <Image
                       className="h-6"
-                      src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                      alt={theme === "dark" ? "Moon icon" : "Sun icon"}
-                      width={64}
-                      height={40} 
+                      src={`/images/${theme === "dark" ? "sun.svg" : "moon.svg"}`}
+                      alt={theme === "dark" ? "Sun icon" : "Moon icon"}
+                      width={24}
+                      height={24}
                       priority
                     />
                   </Button>
@@ -85,8 +84,8 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                         ? "Close menu"
                         : "Close menu (white icon)"
                     }
-                    width={26}
-                    height={26}
+                    width={20}
+                    height={20}
                     priority
                   />
                 </Popover.Button>
@@ -196,9 +195,8 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
           className="h-12"
           src={`/images/${theme === "dark" ? "my-logo-inverted-04.svg" : "my-logo-04.svg"}`}
           alt={theme === "dark" ? "My logo inverted" : "My logo"}
-          //set size for logo - Desktop
-          width={60}
-          height={60}
+          width={48}
+          height={48}
           priority
           onClick={() => router.push("/")}
           style={{ cursor: "pointer" }}
@@ -221,28 +219,17 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
             )*/}
 
             <Button
-                    onClick={() =>
-                      window.open("https://bryanlordeus.myportfolio.com")
-                    }
-                  >
-                    Graphics
-                  </Button>
-
-                  <Button
-                    onClick={() =>
-                      window.open("https://casestudiesbybryan.myportfolio.com")
-                    }
-                  >
-                    Case Studies
-                  </Button>
-
-                  <Button
-                    onClick={() =>
-                      window.open("mailto:imaginedbybryan@gmail.com")
-                    }
-                  >
-                    Contact
-                  </Button>
+              onClick={() => window.open("mailto:imaginedbybryan@gmail.com")}
+            >
+              Contact
+            </Button>
+            <Button
+              onClick={() =>
+                window.open("https://bryanlordeus.myportfolio.com")
+              }
+            >
+              Other Work
+            </Button>
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -251,8 +238,8 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                   alt={theme === "dark" ? "Moon icon" : "Sun icon"}
-                  width={26}
-                  height={26}
+                  width={24}
+                  height={24}
                   priority
                 />
               </Button>

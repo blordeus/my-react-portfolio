@@ -46,7 +46,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                 style={{ cursor: "pointer" }}
               />
 
-              <div className="flex items-center space-x-3">
+              <div className="flex items-baseline">
                 {data.darkMode && (
                   <Button
                     onClick={() =>

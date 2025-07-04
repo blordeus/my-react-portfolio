@@ -46,7 +46,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                 style={{ cursor: "pointer" }}
               />
 
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center">
                 {data.darkMode && (
                   <Button
                     onClick={() =>
@@ -57,8 +57,8 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                       className="h-6"
                       src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                       alt={theme === "dark" ? "Moon icon" : "Sun icon"}
-                      width={64}
-                      height={40} 
+                      width={20}
+                      height={32} 
                       priority
                     />
                   </Button>

@@ -31,7 +31,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                 {name}
               </h1> */}
               <Image
-                className="h-6"
+                className="h-6 mb-"
                 src={`/images/${
                   theme === "dark"
                     ? "my-logo-inverted-04.svg"
@@ -46,7 +46,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                 style={{ cursor: "pointer" }}
               />
 
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center gap-24">
                 {data.darkMode && (
                   <Button
                     onClick={() =>
@@ -55,41 +55,17 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                   >
                     <Image
                       className="h-6"
-                      src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                      alt={theme === "dark" ? "Moon icon" : "Sun icon"}
-                      width={64}
-                      height={40} 
+                      src={`/images/${theme === "dark" ? "sun.svg" : "moon.svg"}`}
+                      alt={theme === "dark" ? "Sun icon" : "Moon icon"}
+                      width={26}
+                      height={26}
                       priority
                     />
                   </Button>
+                  
                 )}
 
-                <Popover.Button>
-                  <Image
-                    className="h-5"
-                    src={`/images/${
-                      !open
-                        ? theme === "dark"
-                          ? "menu-white.svg"
-                          : "menu.svg"
-                        : theme === "light"
-                        ? "cancel.svg"
-                        : "cancel-white.svg"
-                    }`}
-                    alt={
-                      !open
-                        ? theme === "dark"
-                          ? "Open menu (white icon)"
-                          : "Open menu"
-                        : theme === "light"
-                        ? "Close menu"
-                        : "Close menu (white icon)"
-                    }
-                    width={26}
-                    height={26}
-                    priority
-                  />
-                </Popover.Button>
+                
               </div>
             </div>
             <Popover.Panel

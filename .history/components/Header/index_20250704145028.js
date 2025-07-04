@@ -40,13 +40,13 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                 alt={theme === "dark" ? "My logo inverted" : "My logo"}
                 //set sizes for Mobile
                 width={70}
-                height={70}
+                height={60}
                 priority
                 onClick={() => router.push("/")}
                 style={{ cursor: "pointer" }}
               />
 
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center">
                 {data.darkMode && (
                   <Button
                     onClick={() =>
@@ -55,10 +55,10 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                   >
                     <Image
                       className="h-6"
-                      src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                      alt={theme === "dark" ? "Moon icon" : "Sun icon"}
-                      width={64}
-                      height={40} 
+                      src={`/images/${theme === "dark" ? "sun.svg" : "moon.svg"}`}
+                      alt={theme === "dark" ? "Sun icon" : "Moon icon"}
+                      width={24}
+                      height={24}
                       priority
                     />
                   </Button>
