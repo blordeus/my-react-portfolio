@@ -3,10 +3,4 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = {
-  images: {
-    domains: ['images2.imgbox.com'],
-  },
-};
-
 module.exports = nextConfig

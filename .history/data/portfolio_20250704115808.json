@@ -163,7 +163,7 @@
       "universityPara": "English, with a concentration in Professional Writing, Rhetoric, and Technology" 
     },
     "languages": ["Javascript", "HTML5", "CSS"],
-    "frameworks": ["React", "Bootstrap", "Vue", "Tailwindcss", "Chakra Ui"],
-    "others": ["Figma", "Sketch", "WordPress", "Squarespace", "Adobe Creative Suite", "Canva", "Wix", "Webflow"]
+    "frameworks": ["React", "Bootstrap", "Vue" "Tailwindcss", "Chakra Ui"],
+    "others": ["Figma", "Sketch", "WordPress", "Squarespace", "Photoshop", "InDesign", "Illustrator"]
   }
 }

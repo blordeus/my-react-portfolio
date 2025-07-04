@@ -129,10 +129,10 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
 
                   <Button
                     onClick={() =>
-                      window.open("https://bryanlordeus.myportfolio.com")
+                      window.open("mailto:imaginedbybryan@gmail.com")
                     }
                   >
-                    Graphics
+                    Contact
                   </Button>
 
                   <Button
@@ -141,14 +141,6 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                     }
                   >
                     Case Studies
-                  </Button>
-
-                  <Button
-                    onClick={() =>
-                      window.open("mailto:imaginedbybryan@gmail.com")
-                    }
-                  >
-                    Contact
                   </Button>
 
                   
@@ -166,7 +158,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
         <img
           className="h-12"
           src={`/images/${
-            theme === "dark" ? "my-logo-inverted-04.svg" : "my-logo-04.svg"
+            theme === "dark" ? "my-logo-inverted-01.svg" : "my-logo-01.svg"
           }`}
           onClick={() => router.push("/")}
         ></img>

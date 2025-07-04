@@ -166,7 +166,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
         <img
           className="h-12"
           src={`/images/${
-            theme === "dark" ? "my-logo-inverted-04.svg" : "my-logo-04.svg"
+            theme === "dark" ? "my-logo-inverted-04.svg" : "my-logo-01.svg"
           }`}
           onClick={() => router.push("/")}
         ></img>

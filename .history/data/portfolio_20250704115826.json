@@ -164,6 +164,6 @@
     },
     "languages": ["Javascript", "HTML5", "CSS"],
     "frameworks": ["React", "Bootstrap", "Vue", "Tailwindcss", "Chakra Ui"],
-    "others": ["Figma", "Sketch", "WordPress", "Squarespace", "Adobe Creative Suite", "Canva", "Wix", "Webflow"]
+    "others": ["Figma", "Sketch", "WordPress", "Squarespace", "Adobe Creative Suite", "InDesign", "Illustrator"]
   }
 }

@@ -9,4 +9,5 @@ module.exports = {
   },
 };
 
+
 module.exports = nextConfig
