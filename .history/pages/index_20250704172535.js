@@ -72,17 +72,17 @@ export default function Home() {
           handleWorkScroll={handleWorkScroll}
           handleServiceScroll={handleServiceScroll}
         />
-        <div className="laptop:mt-16 mt-12">
+        <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
             <h1
               ref={textOne}
-              className="text-3xl tablet:text-3xl laptop:text-6xl laptopl:text-7xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
+              className="text-3xl tablet:text-3xl laptop:text-6xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
             >
               {data.headerTaglineOne}
             </h1>
             <h1
               ref={textTwo}
-              className="text-3xl tablet:text-3xl laptop:text-6xl laptopl:text-7xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-3xl tablet:text-3xl laptop:text-5xl laptopl:text-5xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineTwo}
             </h1>

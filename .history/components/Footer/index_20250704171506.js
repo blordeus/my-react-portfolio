@@ -85,7 +85,7 @@ const Footer = ({}) => {
 
   return (
     <>
-      <div className="mt-5 laptop:mt-24 p-2 laptop:p-0 text-center">
+      <div className="mt-5 laptop:mt-20 p-2 laptop:p-0 text-center">
         <div>
           {/* <h1 className="text-5xl text-bold">Find Me Online</h1> */}
           <div className="mt-10">
