@@ -12,19 +12,6 @@ body {
   @apply dark:bg-black dark:text-white;
 }
 
-.my-masonry-grid {
-  display: flex;
-  margin-left: -1.5rem; /* Gutter size */
-  width: auto;
-}
-.my-masonry-grid_column {
-  padding-left: 1.5rem; /* Gutter size */
-  background-clip: padding-box;
-}
-.my-masonry-grid_column > div {
-  margin-bottom: 1.5rem; /* Space between cards */
-}
-
 .gradient-circle {
   position: absolute;
   pointer-events: none;

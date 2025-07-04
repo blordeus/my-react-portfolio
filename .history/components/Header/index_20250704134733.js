@@ -30,20 +30,15 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
               >
                 {name}
               </h1> */}
-              <Image
+              <img
                 className="h-6"
                 src={`/images/${
                   theme === "dark"
-                    ? "my-logo-inverted-04.svg"
-                    : "my-logo-04.svg"
+                    ? "my-logo-inverted-01.svg"
+                    : "my-logo-01.svg"
                 }`}
-                alt={theme === "dark" ? "My logo inverted" : "My logo"}
-                width={96}
-                height={24}
-                priority
                 onClick={() => router.push("/")}
-                style={{ cursor: "pointer" }}
-              />
+              ></img>
 
               <div className="flex items-center">
                 {data.darkMode && (
@@ -52,19 +47,17 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
                   >
-                    <Image
+                    <img
                       className="h-6"
-                      src={`/images/${theme === "dark" ? "sun.svg" : "moon.svg"}`}
-                      alt={theme === "dark" ? "Sun icon" : "Moon icon"}
-                      width={24}
-                      height={24}
-                      priority
-                    />
+                      src={`/images/${
+                        theme === "dark" ? "sun.svg" : "moon.svg"
+                      }`}
+                    ></img>
                   </Button>
                 )}
 
                 <Popover.Button>
-                  <Image
+                  <img
                     className="h-5"
                     src={`/images/${
                       !open
@@ -75,19 +68,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                         ? "cancel.svg"
                         : "cancel-white.svg"
                     }`}
-                    alt={
-                      !open
-                        ? theme === "dark"
-                          ? "Open menu (white icon)"
-                          : "Open menu"
-                        : theme === "light"
-                        ? "Close menu"
-                        : "Close menu (white icon)"
-                    }
-                    width={20}
-                    height={20}
-                    priority
-                  />
+                  ></img>
                 </Popover.Button>
               </div>
             </div>
@@ -262,14 +243,10 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                <Image
+                <img
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                  alt={theme === "dark" ? "Moon icon" : "Sun icon"}
-                  width={24}
-                  height={24}
-                  priority
-                />
+                ></img>
               </Button>
             )}
           </div>

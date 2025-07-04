@@ -64,7 +64,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                 )}
 
                 <Popover.Button>
-                  <Image
+                  <img
                     className="h-5"
                     src={`/images/${
                       !open
@@ -75,19 +75,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                         ? "cancel.svg"
                         : "cancel-white.svg"
                     }`}
-                    alt={
-                      !open
-                        ? theme === "dark"
-                          ? "Open menu (white icon)"
-                          : "Open menu"
-                        : theme === "light"
-                        ? "Close menu"
-                        : "Close menu (white icon)"
-                    }
-                    width={20}
-                    height={20}
-                    priority
-                  />
+                  ></img>
                 </Popover.Button>
               </div>
             </div>
@@ -262,14 +250,10 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                <Image
+                <img
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                  alt={theme === "dark" ? "Moon icon" : "Sun icon"}
-                  width={24}
-                  height={24}
-                  priority
-                />
+                ></img>
               </Button>
             )}
           </div>

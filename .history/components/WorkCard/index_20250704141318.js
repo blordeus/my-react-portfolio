@@ -13,12 +13,13 @@ const WorkCard = ({ img, name, description, onClick, sourceURL, showSource }) =>
 
   return (
     <div className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link bg-gray-100 dark:bg-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300">
-      <div className="relative rounded-lg overflow-hidden transition-all ease-out duration-300" style={{ paddingTop: '75%' }}> {/* 4:3 aspect ratio placeholder */}
+      <div className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-48"> {/* Fixed height as fallback */}
         {img && (
           <Image
             src={img}
             alt={name}
-            layout="fill"
+            width={800} // Approximate width
+            height={600} // Approximate height
             className="w-full h-full object-cover hover:scale-110 transition-all ease-out duration-300"
             onClick={onClick}
           />

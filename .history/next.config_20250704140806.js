@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['images2.imgbox.com'], // Add your image domains here
+    domains: ['images2.imgbox.com'],
   },
 };
 

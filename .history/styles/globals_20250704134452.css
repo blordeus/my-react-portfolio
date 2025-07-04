@@ -12,6 +12,7 @@ body {
   @apply dark:bg-black dark:text-white;
 }
 
+/* styles/globals.css */
 .my-masonry-grid {
   display: flex;
   margin-left: -1.5rem; /* Gutter size */

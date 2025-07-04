@@ -1,6 +1,6 @@
 // components/ProjectGallery.js
 import Masonry from 'react-masonry-css';
-import WorkCard from '../WorkCard';
+import WorkCard from '..WorkCard';
 
 export default function ProjectGallery({ projects }) {
   const breakpointColumnsObj = {
