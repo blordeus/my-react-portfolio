@@ -16,6 +16,24 @@
   ],
   "projects": [
     {
+      "id": "1-1as4r3f321",
+      "title": "Character Counter App",
+      "description": "HTML | CSS | JavaScript | React",
+      "imageSrc": "https://images2.imgbox.com/06/98/UtvWOHtO_o.png",
+      "url": "https://blordeus.github.io/character-counter-app/",
+      "sourceUrl": "https://github.com/blordeus/character-counter-app",
+      "showSource": true
+    },
+    {
+      "id": "1-1joie121",
+      "title": "E-commerce Product Page",
+      "description": "HTML | CSS | JavaScript | React",
+      "imageSrc": "https://images2.imgbox.com/aa/4c/upcGMVsw_o.png",
+      "url": "https://blordeus.github.io/ecommerce-product-page/",
+      "sourceUrl": "https://github.com/blordeus/ecommerce-product-page",
+      "showSource": true
+    },
+    {
       "id": "1-1as2e121",
       "title": "Project Tracking Landing Page",
       "description": "HTML | CSS | JavaScript",
