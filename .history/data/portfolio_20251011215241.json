@@ -17,11 +17,11 @@
   "projects": [
     {
       "id": "1-1as4uiguifvukr3f321",
-      "title": "Soul System Streaming",
+      "title": "Character Counter App",
       "description": "HTML | CSS | JavaScript | React",
-      "imageSrc": "https://images2.imgbox.com/09/c5/osct6gO4_o.png",
-      "url": "https://soul-system-streaming.vercel.app/",
-      "sourceUrl": "https://github.com/blordeus/soul-system-streaming",
+      "imageSrc": "https://images2.imgbox.com/06/98/UtvWOHtO_o.png",
+      "url": "https://blordeus.github.io/character-counter-app/",
+      "sourceUrl": "https://github.com/blordeus/character-counter-app",
       "showSource": true
     },
     {
