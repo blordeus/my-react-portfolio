@@ -8,6 +8,7 @@
   "showBlog": false,
   "darkMode": true,
   "showResume": false,
+  "behanceUrl": "https://www.behance.net/YOUR_USERNAME",
   "socials": [
     { "id": "1", "title": "Github", "link": "https://github.com/blordeus" },
     { "id": "2", "title": "LinkedIn", "link": "https://www.linkedin.com/in/bryanlordeus/"},
@@ -18,9 +19,7 @@
     { "id": "all", "name": "All Projects" },
     { "id": "web-apps", "name": "Web Applications" },
     { "id": "client-sites", "name": "Client Websites" },
-    { "id": "landing-pages", "name": "Landing Pages" },
-    { "id": "marketing", "name": "Marketing & Content" },
-    { "id": "social-media", "name": "Social Media" }
+    { "id": "landing-pages", "name": "Landing Pages" }
   ],
   "projects": [
     {

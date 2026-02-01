@@ -1,8 +1,8 @@
-import { useRef } from "react";
+// pages/index.js
+import { useRef, useState } from "react";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
-// import WorkCard from "../components/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer";
@@ -11,14 +11,18 @@ import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
 import ProjectGallery from "../components/ProjectGallery"; 
+import ProjectFilter from "../components/ProjectFilter";
+import BehanceBanner from "../components/BehanceBanner";
 
 // Local Data
-import data from "../data/portfolio.json";
+import data from "../data/portfolio-updated.json";
 
 export default function Home() {
+  // State for filtering
+  const [activeCategory, setActiveCategory] = useState('all');
+
   // Ref
   const workRef = useRef();
-  // const aboutRef = useRef();
   const serviceRef = useRef();
   const textOne = useRef();
   const textTwo = useRef();
@@ -34,13 +38,6 @@ export default function Home() {
     });
   };
 
-  // const handleAboutScroll = () => {
-  //   window.scrollTo({
-  //     top: aboutRef.current.offsetTop,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // };
   const handleServiceScroll = () => {
     window.scrollTo({
       top: serviceRef.current.offsetTop,
@@ -102,20 +99,28 @@ export default function Home() {
 
           <Socials className="mt-4 laptop:mt-4" />
         </div>
-
-        {/* <div className="mt-32 laptop:mt-40 p-2 laptop:p-0 " ref={aboutRef}>
-          <h1 className="tablet:m-10 text-6xl text-bold text-center">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara}
-          </p>
-        </div> */}
         
         <div className="mt-24 laptop:mt-20 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-6xl text-bold text-center">Work</h1>
+          <h1 className="text-6xl text-bold text-center mb-8">Web Development</h1>
+          
+          {/* Filter Component */}
+          <ProjectFilter 
+            categories={data.projectCategories}
+            activeCategory={activeCategory}
+            onFilterChange={setActiveCategory}
+          />
+          
+          {/* Project Gallery */}
           <div className="mt-6 laptop:mt-8">
-            <ProjectGallery projects={data.projects} /> {/* Replace grid with ProjectGallery */}
+            <ProjectGallery 
+              projects={data.projects} 
+              activeCategory={activeCategory}
+            />
           </div>
         </div>
+
+        {/* Behance Banner for Marketing Work */}
+        <BehanceBanner behanceUrl={data.behanceUrl} />
 
         <div className="laptop:mt-20 p-2 laptop:p-0 mt-24" ref={serviceRef}>
           <h1 className="tablet:m-10 text-6xl text-bold text-center ">Services</h1>
