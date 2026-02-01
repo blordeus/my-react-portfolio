@@ -1,7 +1,7 @@
 // components/ProjectGallery.js
 import { useState, useEffect } from 'react';
 import Masonry from 'react-masonry-css';
-import WorkCard from './WorkCard';
+import WorkCard from '../WorkCard';
 
 export default function ProjectGallery({ projects, activeCategory }) {
   const [filteredProjects, setFilteredProjects] = useState(projects);
