@@ -1,6 +1,7 @@
 // pages/index.js
 import { useRef, useState } from "react";
 import Header from "../components/Header";
+import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
@@ -22,6 +23,7 @@ export default function Home() {
 
   // Ref
   const workRef = useRef();
+  const serviceRef = useRef();
   const textOne = useRef();
   const textTwo = useRef();
   const textThree = useRef();
@@ -31,6 +33,14 @@ export default function Home() {
   const handleWorkScroll = () => {
     window.scrollTo({
       top: workRef.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleServiceScroll = () => {
+    window.scrollTo({
+      top: serviceRef.current.offsetTop,
       left: 0,
       behavior: "smooth",
     });
@@ -57,6 +67,7 @@ export default function Home() {
       <div className="container mx-auto mb-10">
         <Header
           handleWorkScroll={handleWorkScroll}
+          handleServiceScroll={handleServiceScroll}
         />
         <div className="laptop:mt-16 mt-12">
           <div className="mt-5">
@@ -110,6 +121,21 @@ export default function Home() {
 
         {/* Behance Banner for Marketing Work */}
         <BehanceBanner behanceUrl={data.behanceUrl} />
+
+        <div className="laptop:mt-20 p-2 laptop:p-0 mt-24" ref={serviceRef}>
+          <h1 className="tablet:m-10 text-6xl text-bold text-center ">Services</h1>
+          <div className="mt-4 laptop:mt-8">
+            <div className="mt-4 tablet:m-10 grid grid-cols-1 laptop:grid-cols-3 gap-6">
+              {data.services.map((service, index) => (
+                <ServiceCard
+                  key={index}
+                  name={service.title}
+                  description={service.description}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* This button should not go into production */}
         {process.env.NODE_ENV === "development" && (
