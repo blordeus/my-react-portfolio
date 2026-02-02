@@ -30,6 +30,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
               >
                 {name}
               </h1> */}
+              {mounted && theme && (
               <Image
                 className="h-6"
                 src={`/images/${
@@ -45,7 +46,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
                 onClick={() => router.push("/")}
                 style={{ cursor: "pointer" }}
               />
-
+              )}
               <div className="flex items-center space-x-3">
                 {mounted && theme && data.darkMode && (
                   <Button
@@ -192,6 +193,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
           theme === "light" && "bg-white"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
+        {mounted && theme && (
         <Image
           className="h-12"
           src={`/images/${theme === "dark" ? "my-logo-inverted-04.svg" : "my-logo-04.svg"}`}
@@ -203,6 +205,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
           onClick={() => router.push("/")}
           style={{ cursor: "pointer" }}
         />
+        )}
         {!isBlog ? (
           <div className="flex">
             <Button onClick={handleWorkScroll}>Work</Button>
