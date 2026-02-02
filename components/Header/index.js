@@ -47,7 +47,7 @@ const Header = ({ handleWorkScroll, handleServiceScroll, isBlog }) => {
               />
 
               <div className="flex items-center space-x-3">
-                {data.darkMode && (
+                {mounted && theme && data.darkMode && (
                   <Button
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
