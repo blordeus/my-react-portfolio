@@ -6,7 +6,7 @@ export default function About({ aboutContent = [] }) {
   }
 
   return (
-    <div className="mt-16 laptop:mt-20 p-2 laptop:p-0">
+    <div className="mt-16 laptop:mt-32 p-2 laptop:p-0">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl laptop:text-5xl font-bold text-center mb-8">
           About
