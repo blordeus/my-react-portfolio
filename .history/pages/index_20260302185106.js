@@ -1,0 +1,143 @@
+// pages/index.js - With About Section
+import { useRef, useState } from "react";
+import Header from "../components/Header";
+import Socials from "../components/Socials";
+import About from "../components/About";
+import { useIsomorphicLayoutEffect } from "../utils";
+import { stagger } from "../animations";
+import Footer from "../components/Footer";
+import Head from "next/head";
+import Button from "../components/Button";
+import Link from "next/link";
+import Cursor from "../components/Cursor";
+import ProjectGallery from "../components/ProjectGallery"; 
+import ProjectFilter from "../components/ProjectFilter";
+import BehanceBanner from "../components/BehanceBanner";
+
+// Local Data
+import data from "../data/portfolio-updated.json";
+
+export default function Home() {
+  // State for filtering
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  // Ref
+  const workRef = useRef();
+  const aboutRef = useRef();
+  const textOne = useRef();
+  const textTwo = useRef();
+  const textThree = useRef();
+  const textFour = useRef();
+
+  // Handling Scroll
+  const handleWorkScroll = () => {
+    window.scrollTo({
+      top: workRef.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleAboutScroll = () => {
+    window.scrollTo({
+      top: aboutRef.current.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useIsomorphicLayoutEffect(() => {
+    stagger(
+      [textOne.current, textTwo.current, textThree.current, textFour.current],
+      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
+      { y: 0, x: 0, transform: "scale(1)" }
+    );
+  }, []);
+
+  return (
+    <div className={`relative ${data.showCursor && "cursor-none"}`}>
+      {data.showCursor && <Cursor />}
+      <Head>
+        <title>{data.name}</title>
+      </Head>
+
+      <div className="gradient-circle"></div>
+      <div className="gradient-circle-bottom"></div>
+
+      <div className="container mx-auto mb-10">
+        <Header
+          handleWorkScroll={handleWorkScroll}
+          handleAboutScroll={handleAboutScroll}
+        />
+        <div className="laptop:mt-16 mt-12">
+          <div className="mt-5">
+            <h1
+              ref={textOne}
+              className="text-3xl tablet:text-3xl laptop:text-6xl laptopl:text-7xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
+            >
+              {data.headerTaglineOne}
+            </h1>
+            <h1
+              ref={textTwo}
+              className="text-3xl tablet:text-3xl laptop:text-6xl laptopl:text-7xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+            >
+              {data.headerTaglineTwo}
+            </h1>
+            <h1
+              ref={textThree}
+              className="text-3xl tablet:text-3xl laptop:text-4xl laptopl:text-5xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+            >
+              {data.headerTaglineThree}
+            </h1>
+            <h1
+              ref={textFour}
+              className="text-3xl tablet:text-3xl laptop:text-4xl laptopl:text-5xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+            >
+              {data.headerTaglineFour}
+            </h1>
+          </div>
+
+          <Socials className="mt-4 laptop:mt-4" />
+        </div>
+
+        {/* About Section */}
+        <div ref={aboutRef}>
+          <About aboutContent={data.aboutContent} />
+        </div>
+        
+        <div className="mt-12 laptop:mt-20 p-2 laptop:p-0" ref={workRef}>
+          <h1 className="text-5xl laptop:text-5xl font-serif text-center mb-8">Web Development</h1>
+          
+          {/* Filter Component */}
+          <ProjectFilter 
+            categories={data.projectCategories}
+            activeCategory={activeCategory}
+            onFilterChange={setActiveCategory}
+          />
+          
+          {/* Project Gallery */}
+          <div className="mt-6 laptop:mt-8">
+            <ProjectGallery 
+              projects={data.projects} 
+              activeCategory={activeCategory}
+            />
+          </div>
+        </div>
+
+        {/* Behance Banner for Marketing Work */}
+        <BehanceBanner behanceUrl={data.behanceUrl} />
+
+        {/* This button should not go into production */}
+        {process.env.NODE_ENV === "development" && (
+          <div className="fixed bottom-5 right-5">
+            <Link href="/edit">
+              <Button type="primary">Edit Data</Button>
+            </Link>
+          </div>
+        )}
+     
+        <Footer />
+      </div>
+    </div>
+  );
+}

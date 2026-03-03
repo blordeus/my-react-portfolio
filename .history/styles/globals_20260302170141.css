@@ -1,0 +1,252 @@
+/* ─────────────────────────────────────────────────────────────
+   Imagined By Bryan — Global Styles
+   Brand System 2026 Edition
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Google Fonts ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Custom Properties ────────────────────────────────── */
+:root {
+  /* Core palette */
+  --color-cream:          #F4F0E8;
+  --color-cream-tint:     #FAF9F6;
+  --color-cream-accent:   #EAE4DA;
+
+  --color-slate:          #435066;
+  --color-slate-light:    #5A6477;
+  --color-slate-dark:     #2C3747;
+  --color-slate-accent:   #56637B;
+
+  --color-pine:           #365349;
+  --color-pine-tint:      #597067;
+  --color-pine-deep:      #253D35;
+  --color-pine-accent:    #4B6A5E;
+
+  --color-ink:            #2B3A42;
+  --color-ink-light:      #3F4F5B;
+  --color-ink-accent:     #364551;
+
+  --color-olive:          #768079;
+  --color-olive-tint:     #A1A7A2;
+  --color-olive-dark:     #5A635D;
+
+  --color-graphite:       #1F1F1F;
+  --color-graphite-mid:   #2D2D2D;
+  --color-graphite-black: #121212;
+
+  /* Semantic tokens — light mode */
+  --bg-primary:           var(--color-cream);
+  --bg-secondary:         var(--color-cream-tint);
+  --bg-accent:            var(--color-cream-accent);
+  --bg-dark:              var(--color-graphite);
+  --bg-dark-alt:          var(--color-ink);
+
+  --text-primary:         var(--color-graphite);
+  --text-secondary:       var(--color-slate);
+  --text-muted:           var(--color-olive);
+  --text-inverse:         var(--color-cream);
+
+  --border-light:         var(--color-cream-accent);
+  --border-mid:           var(--color-olive-tint);
+  --border-dark:          var(--color-slate);
+
+  --accent-primary:       var(--color-slate);
+  --accent-secondary:     var(--color-pine);
+  --accent-tertiary:      var(--color-ink);
+
+  /* Typography */
+  --font-serif:           'DM Serif Display', Georgia, serif;
+  --font-sans:            'DM Sans', system-ui, sans-serif;
+
+  /* Spacing rhythm */
+  --section-gap:          6rem;
+  --container-pad:        1.5rem;
+
+  /* Transitions */
+  --transition-base:      200ms ease;
+  --transition-slow:      400ms ease;
+}
+
+/* ── Dark Mode Tokens ─────────────────────────────────────── */
+.dark {
+  --bg-primary:           var(--color-graphite);
+  --bg-secondary:         var(--color-graphite-mid);
+  --bg-accent:            var(--color-ink);
+  --bg-dark:              var(--color-graphite-black);
+  --bg-dark-alt:          var(--color-slate-dark);
+
+  --text-primary:         var(--color-cream);
+  --text-secondary:       var(--color-cream-accent);
+  --text-muted:           var(--color-olive-tint);
+  --text-inverse:         var(--color-graphite);
+
+  --border-light:         var(--color-graphite-mid);
+  --border-mid:           var(--color-ink);
+  --border-dark:          var(--color-slate);
+}
+
+/* ── Base Styles ──────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color var(--transition-slow),
+                color var(--transition-slow);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 400; /* DM Serif Display is expressive at regular weight */
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  /* Label / eyebrow text */
+  .label {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color-slate);
+    color: var(--color-cream);
+  }
+}
+
+/* ── Component Layer ──────────────────────────────────────── */
+@layer components {
+
+  /* Container */
+  .container-brand {
+    @apply max-w-6xl mx-auto px-6 md:px-10;
+  }
+
+  /* Section padding */
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  /* ── Buttons ── */
+  .btn {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold
+           tracking-wide transition-all duration-200 cursor-pointer
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-graphite text-cream hover:bg-slate
+           focus-visible:ring-graphite;
+  }
+
+  .btn-secondary {
+    @apply btn bg-transparent border border-current text-graphite
+           dark:text-cream hover:bg-cream-accent dark:hover:bg-ink
+           focus-visible:ring-slate;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-slate dark:text-cream-accent
+           hover:text-graphite dark:hover:text-cream underline-offset-4
+           hover:underline;
+  }
+
+  /* ── Cards ── */
+  .card {
+    @apply bg-cream-tint dark:bg-ink border border-cream-accent
+           dark:border-ink-accent rounded-none shadow-card
+           transition-shadow duration-200 hover:shadow-card-md;
+  }
+
+  .card-dark {
+    @apply bg-slate-dark text-cream border border-slate-accent
+           rounded-none shadow-slate;
+  }
+
+  /* ── Nav Link ── */
+  .nav-link {
+    @apply text-sm font-medium text-graphite dark:text-cream-accent
+           hover:text-slate dark:hover:text-cream
+           transition-colors duration-200 relative
+           after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px
+           after:bg-slate dark:after:bg-cream
+           after:transition-all after:duration-200
+           hover:after:w-full;
+  }
+
+  /* ── Tag / Badge ── */
+  .tag {
+    @apply inline-block px-2.5 py-0.5 text-2xs font-semibold
+           tracking-widest uppercase bg-cream-accent dark:bg-ink
+           text-slate dark:text-cream-accent;
+  }
+
+  .tag-pine {
+    @apply tag bg-pine text-[#F4F0E8];
+  }
+
+  .tag-slate {
+    @apply tag bg-slate text-[#F4F0E8];
+  }
+
+  /* ── Section Divider ── */
+  .divider {
+    @apply w-12 h-px bg-slate dark:bg-cream-accent my-6;
+  }
+
+  /* ── Eyebrow Label ── */
+  .eyebrow {
+    @apply label text-olive dark:text-olive-tint mb-3 block;
+  }
+}
+
+/* ── Utility Layer ────────────────────────────────────────── */
+@layer utilities {
+  /* Text gradient */
+  .text-gradient-slate {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #435066 0%, #2B3A42 100%);
+  }
+
+  /* Left accent bar (used in brand book headers) */
+  .accent-bar {
+    @apply relative pl-4
+           before:absolute before:left-0 before:top-0 before:bottom-0
+           before:w-0.5 before:bg-slate dark:before:bg-cream-accent;
+  }
+
+  /* Hover lift */
+  .hover-lift {
+    @apply transition-transform duration-200 hover:-translate-y-0.5;
+  }
+
+  /* Scroll reveal helper (pair with JS IntersectionObserver) */
+  .reveal {
+    @apply opacity-0 translate-y-4 transition-all duration-500;
+  }
+  .reveal.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}

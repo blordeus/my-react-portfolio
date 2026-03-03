@@ -11,7 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^1.6.6",
     "autoprefixer": "^10.4.7",
-    "caniuse-lite": "^1.0.30001726",
+    "caniuse-lite": "^1.0.30001775",
     "custom-cursor-react": "^1.0.5",
     "gray-matter": "^4.0.3",
     "gsap": "^3.10.4",
@@ -33,6 +33,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "browserslist": "^4.28.1",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6"
   }
