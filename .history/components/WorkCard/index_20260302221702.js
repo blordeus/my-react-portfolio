@@ -31,7 +31,7 @@ const WorkCard = ({ img, name, description, results, onClick, sourceURL, showSou
 
         {/* Tech Stack Tags */}
         <div className="flex flex-wrap gap-2 mb-4">
-          {techStack.slice(0, 4).map((tech, index) => (
+          {techStack.slice(0, 2).map((tech, index) => (
             <span
               key={index}
               className="px-3 py-1 text-xs font-medium bg-cream-accent text-slate rounded-full"

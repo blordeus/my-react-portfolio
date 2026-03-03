@@ -276,7 +276,7 @@
       "universityDate": "2014-2016",
       "universityPara": "English, with a concentration in Professional Writing, Rhetoric, and Technology" 
     },
-    "languages": ["Javascript", "HTML5", "CSS", "React"],
+    "languages": ["Javascript", "HTML5", "CSS", "R"],
     "frameworks": ["React", "Bootstrap", "Vue", "Tailwindcss", "Chakra Ui"],
     "others": ["Figma", "Sketch", "WordPress", "Squarespace", "Adobe Creative Suite", "Canva", "Wix", "Webflow"]
   }
