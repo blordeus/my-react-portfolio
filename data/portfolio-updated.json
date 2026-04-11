@@ -29,6 +29,22 @@
   ],
   "projects": [
      {
+      "id": "linksharing-008",
+      "title": "Link Sharing App",
+      "description": "Next.js | Supabase | Full Stack",
+      "category": "web-apps",
+      "tags": [
+        "Next.js",
+        "Full Stack",
+        "Authentication"
+      ],
+      "results": "Full-stack app with user authentication, file uploads, and drag-and-drop UI",
+      "imageSrc": "https://via.placeholder.com/800x600/435066/F4F0E8?text=Link+Sharing",
+      "url": "https://linksharing-app-five.vercel.app",
+      "sourceURL": "https://github.com/blordeus/linksharing-app",
+      "showSource": true
+    },
+     {
       "id": "kanban-007",
       "title": "Kanban Task Management",
       "description": "React | Next.js | Drag & Drop",
