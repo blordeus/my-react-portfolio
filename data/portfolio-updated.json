@@ -29,6 +29,21 @@
   ],
   "projects": [
      {
+      "id": "photosnap-009",
+      "title": "Photosnap - Multi-Page Website",
+      "description": "Next.js | TypeScript | Tailwind CSS",
+      "category": "client-sites",
+      "tags": [
+        "Next.js",
+        "Marketing Site",
+        "Multi-page"
+      ],
+      "imageSrc": "https://i.ibb.co/60BwDzcg/desktop-1440px.png",
+      "url": "https://photosnap-multipage-website-swart.vercel.app",
+      "sourceURL": "https://github.com/blordeus/photosnap-multipage-website",
+      "showSource": true
+    },
+     {
       "id": "linksharing-008",
       "title": "Link Sharing App",
       "description": "Next.js | Supabase | Full Stack",
