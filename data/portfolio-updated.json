@@ -28,6 +28,142 @@
     { "id": "landing-pages", "name": "Landing Pages" }
   ],
   "projects": [
+     {
+      "id": "photosnap-009",
+      "title": "Photosnap - Multi-Page Website",
+      "description": "Next.js | TypeScript | Tailwind CSS",
+      "category": "client-sites",
+      "tags": [
+        "Next.js",
+        "Marketing Site",
+        "Multi-page"
+      ],
+      "imageSrc": "https://i.ibb.co/60BwDzcg/desktop-1440px.png",
+      "url": "https://photosnap-multipage-website-swart.vercel.app",
+      "sourceURL": "https://github.com/blordeus/photosnap-multipage-website",
+      "showSource": true
+    },
+     {
+      "id": "linksharing-008",
+      "title": "Link Sharing App",
+      "description": "Next.js | Supabase | Full Stack",
+      "category": "web-apps",
+      "tags": [
+        "Next.js",
+        "Full Stack",
+        "Authentication"
+      ],
+      "results": "Full-stack app with user authentication, file uploads, and drag-and-drop UI",
+      "imageSrc": "https://via.placeholder.com/800x600/435066/F4F0E8?text=Link+Sharing",
+      "url": "https://linksharing-app-five.vercel.app",
+      "sourceURL": "https://github.com/blordeus/linksharing-app",
+      "showSource": true
+    },
+     {
+      "id": "kanban-007",
+      "title": "Kanban Task Management",
+      "description": "React | Next.js | Drag & Drop",
+      "category": "web-apps",
+      "tags": [
+        "React",
+        "Kanban",
+        "Project Management"
+      ],
+      "imageSrc": "https://i.ibb.co/0jJ7dt9Y/desktop-1440px.png",
+      "url": "https://kanban-task-management-psi.vercel.app/",
+      "sourceURL": "https://github.com/blordeus/kanban-task-management",
+      "showSource": true
+    },
+    {
+      "id": "blog-006",
+      "title": "Personal Blog",
+      "description": "React | Next.js | MDX",
+      "category": "client-sites",
+      "tags": [
+        "React",
+        "Blog",
+        "MDX"
+      ],
+      "imageSrc": "https://i.ibb.co/QFkDS6NM/desktop-1440px.png",
+      "url": "https://personal-blog-three-sandy.vercel.app/",
+      "sourceURL": "https://github.com/blordeus/personal-blog",
+      "showSource": true
+    },
+    {
+      "id": "feedback-005",
+      "title": "Product Feedback App",
+      "description": "React | Next.js | Full Stack",
+      "category": "web-apps",
+      "tags": [
+        "React",
+        "Full Stack",
+        "Feedback"
+      ],
+      "imageSrc": "https://i.ibb.co/B5c5gvsr/desktop-1440px.png",
+      "url": "https://product-feedback-app-drab-three.vercel.app/",
+      "sourceURL": "https://github.com/blordeus/product-feedback-app",
+      "showSource": true
+    },
+    {
+      "id": "recipe-004",
+      "title": "Healthy Recipe Finder",
+      "description": "React | Next.js | Recipe API",
+      "category": "web-apps",
+      "tags": [
+        "React",
+        "API",
+        "Food"
+      ],
+      "imageSrc": "https://i.ibb.co/FkRFzY8J/desktop-1440px.png",
+      "url": "https://healthy-recipe-finder-delta.vercel.app/",
+      "sourceURL": "https://github.com/blordeus/healthy-recipe-finder",
+      "showSource": true
+    },
+    {
+      "id": "bookmark-003",
+      "title": "Bookmark Manager",
+      "description": "React | Next.js | Local Storage",
+      "category": "web-apps",
+      "tags": [
+        "React",
+        "Browser Extension",
+        "Bookmarks"
+      ],
+      "imageSrc": "https://i.ibb.co/HLq2bfzF/desktop-1440px.png",
+      "url": "https://bookmark-manager-cyan.vercel.app/",
+      "sourceURL": "https://github.com/blordeus/bookmark-manager",
+      "showSource": true
+    },
+    {
+      "id": "shortly-002",
+      "title": "Shortly - URL Shortener",
+      "description": "React | Next.js | API Integration",
+      "category": "web-apps",
+      "tags": [
+        "React",
+        "API",
+        "URL Shortener"
+      ],
+      "imageSrc": "https://i.ibb.co/MDjvQKNt/desktop-1440px.png",
+      "url": "https://shortly-peach.vercel.app/",
+      "sourceURL": "https://github.com/blordeus/shortly",
+      "showSource": true
+    },
+    {
+      "id": "myteam-001",
+      "title": "myteam - Multi-Page Website",
+      "description": "React | Next.js | Tailwind CSS",
+      "category": "client-sites",
+      "tags": [
+        "React",
+        "Next.js",
+        "Multi-page"
+      ],
+      "imageSrc": "https://i.ibb.co/27L6b83W/desktop-1440px.png",
+      "url": "https://myteam-multipage-website-kappa.vercel.app/",
+      "sourceURL": "https://github.com/blordeus/myteam-multipage-website",
+      "showSource": true
+    },
     {
       "id": "1-1as4uiguifvukr3f321",
       "title": "Soul System Streaming",
