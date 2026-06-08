@@ -1,0 +1,1235 @@
+diff --git a/components/About/index.js b/components/About/index.js
+index b3bc1ba..aa2b208 100644
+--- a/components/About/index.js
++++ b/components/About/index.js
+@@ -1,22 +1,23 @@
+-// components/About.js
+ export default function About({ aboutContent = [] }) {
+-  // Don't render if no content
+-  if (!aboutContent || aboutContent.length === 0) {
+-    return null;
+-  }
++  if (!aboutContent || aboutContent.length === 0) return null;
+ 
+   return (
+-    <div className="mt-16 laptop:mt-12 p-2 laptop:p-0">
+-      <div className="max-w-4xl mx-auto">
+-        <h2 className="text-5xl laptop:text-5xl font-serif text-center mb-8">
++    <section className="py-14 lg:py-20">
++      <div className="max-w-3xl mx-auto px-2 lg:px-0">
++        <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-3">
+           About
++        </span>
++        <h2 className="text-3xl lg:text-4xl font-serif text-cream mb-6 leading-tight">
++          The person behind the work.
+         </h2>
+-        <div className="space-y-4 text-lg laptop:text-xl text-gray-700 leading-relaxed">
++        <div className="space-y-3">
+           {aboutContent.map((paragraph, index) => (
+-            <p key={index}>{paragraph}</p>
++            <p key={index} className="text-base lg:text-lg text-cream/70 leading-relaxed">
++              {paragraph}
++            </p>
+           ))}
+         </div>
+       </div>
+-    </div>
++    </section>
+   );
+-}
+\ No newline at end of file
++}
+diff --git a/components/BehanceBanner/index.js b/components/BehanceBanner/index.js
+index 9ed8b9f..c082bfe 100644
+--- a/components/BehanceBanner/index.js
++++ b/components/BehanceBanner/index.js
+@@ -1,42 +1,31 @@
+-// components/BehanceBanner.js
+ export default function BehanceBanner({ behanceUrl }) {
+   return (
+-    <div className="mt-16 laptop:mt-20 p-6 laptop:p-8">
+-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-slate to-pine p-8 laptop:p-12 text-cream shadow-2xl">
+-        {/* Decorative elements */}
+-        <div className="absolute top-0 right-0 w-64 h-64 bg-cream opacity-5 rounded-full -mr-32 -mt-32"></div>
+-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-cream opacity-5 rounded-full -ml-24 -mb-24"></div>
+-        
+-        <div className="relative z-10 text-center">
+-          <h2 className="text-5xl laptop:text-4xl font-serif mb-4">
+-            Marketing & Social Media Work
++    <div className="mt-10 lg:mt-14 px-2 lg:px-0">
++      <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-graphite-mid p-8 lg:p-12 text-center">
++        <div className="absolute inset-0 bg-gradient-to-br from-pine-deep/30 via-transparent to-slate-dark/30 pointer-events-none" />
++        <div className="relative z-10">
++          <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-4">
++            Creative Work
++          </span>
++          <h2 className="text-3xl lg:text-4xl font-serif text-cream mb-4">
++            Marketing & Social Media
+           </h2>
+-          <p className="text-lg laptop:text-xl mb-6 opacity-90 max-w-2xl mx-auto">
+-            View my marketing campaigns, social media management, and content strategy work on Behance
++          <p className="text-base text-cream/60 mb-8 max-w-xl mx-auto">
++            Campaigns, content strategy, and social media management — view the full creative portfolio on Behance.
+           </p>
+           <a
+             href={behanceUrl}
+             target="_blank"
+             rel="noopener noreferrer"
+-            className="inline-flex items-center gap-2 bg-cream text-slate px-8 py-3 rounded-lg font-semibold hover:bg-cream-tint transition-all duration-300 transform hover:scale-105 shadow-lg"
++            className="inline-flex items-center gap-2 bg-cream text-graphite-black px-7 py-3 rounded-xl text-sm font-semibold hover:bg-cream-accent transition-colors duration-200"
+           >
+-            View Marketing Portfolio
+-            <svg 
+-              className="w-5 h-5" 
+-              fill="none" 
+-              stroke="currentColor" 
+-              viewBox="0 0 24 24"
+-            >
+-              <path 
+-                strokeLinecap="round" 
+-                strokeLinejoin="round" 
+-                strokeWidth={2} 
+-                d="M14 5l7 7m0 0l-7 7m7-7H3" 
+-              />
++            View on Behance
++            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
++              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+             </svg>
+           </a>
+         </div>
+       </div>
+     </div>
+   );
+-}
+\ No newline at end of file
++}
+diff --git a/components/Button/index.js b/components/Button/index.js
+index 648c15e..16d546d 100644
+--- a/components/Button/index.js
++++ b/components/Button/index.js
+@@ -21,7 +21,7 @@ const Button = ({ children, type, onClick, classes }) => {
+     <button
+       onClick={onClick}
+       type="button"
+-      className={`text-sm tablet:text-base font-medium px-4 py-2 m-1 laptop:m-2 rounded-lg flex items-center transition-all ease-out duration-300 bg-cream-accent hover:bg-slate hover:text-cream border border-slate/20 hover:border-slate hover:scale-105 active:scale-100 tablet:first:ml-0 ${
++      className={`text-xs font-medium px-3.5 py-2 rounded-full flex items-center transition-all ease-out duration-200 bg-white/8 hover:bg-white/15 text-cream/70 hover:text-cream border border-white/10 hover:border-white/25 ${
+         data.showCursor && "cursor-none"
+       } ${classes} link`}
+     >
+diff --git a/components/Footer/index.js b/components/Footer/index.js
+index 11b7bda..76ef455 100644
+--- a/components/Footer/index.js
++++ b/components/Footer/index.js
+@@ -1,114 +1,135 @@
+-import React from "react";
++import React, { useState } from "react";
+ import Link from "next/link";
+ 
+-const navigation = {
+-  social: [
+-    {
+-      name: "Facebook",
+-      href: "https://facebook.com/bryan.lordeus",
+-      icon: (props) => (
+-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+-          <path
+-            fillRule="evenodd"
+-            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+-            clipRule="evenodd"
+-          />
+-        </svg>
+-      ),
+-    },
+-    {
+-      name: "Instagram",
+-      href: "https://instagram.com/imaginedbybryan",
+-      icon: (props) => (
+-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+-          <path
+-            fillRule="evenodd"
+-            d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+-            clipRule="evenodd"
+-          />
+-        </svg>
+-      ),
+-    },
+-    {
+-      name: "Twitter",
+-      href: "https://twitter.com/bryancreates",
+-      icon: (props) => (
+-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+-          <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+-        </svg>
+-      ),
+-    },
+-    {
+-      name: "GitHub",
+-      href: "https://github.com/blordeus" ,
+-      icon: (props) => (
+-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+-          <path
+-            fillRule="evenodd"
+-            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+-            clipRule="evenodd"
+-          />
+-        </svg>
+-      ),
+-    },
+-    {
+-      name: "LinkedIn",
+-      href: "https://www.linkedin.com/in/bryanlordeus/",
+-      icon: (props) => (
+-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+-        </svg>
+-      ),
+-    },
+-    {
+-      name: "Email",
+-      href: "mailto:imaginedbybryan@gmail.com",
+-      icon: (props) => (
+-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
+-          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+-        </svg>
+-      ),
+-    },
+-  ],
+-};
++const socials = [
++  { name: "Instagram", href: "https://instagram.com/imaginedbybryan", icon: "M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" },
++  { name: "GitHub", href: "https://github.com/blordeus", icon: "M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" },
++  { name: "LinkedIn", href: "https://www.linkedin.com/in/bryanlordeus/", icon: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" },
++  { name: "Twitter", href: "https://twitter.com/bryancreates", icon: "M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" },
++];
++
++const Footer = ({ contactRef }) => {
++  const [form, setForm] = useState({ name: "", email: "", message: "" });
++  const [sent, setSent] = useState(false);
++
++  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
++
++  const handleSubmit = (e) => {
++    e.preventDefault();
++    const subject = encodeURIComponent(`Freelance inquiry from ${form.name}`);
++    const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
++    window.open(`mailto:imaginedbybryan@gmail.com?subject=${subject}&body=${body}`);
++    setSent(true);
++    setTimeout(() => setSent(false), 4000);
++  };
+ 
+-const Footer = () => {
+   return (
+     <>
+-      <div className="mt-5 laptop:mt-24 p-2 laptop:p-0 text-center">
+-        <div className="mt-10">
+-          <h1 className="text-5xl tablet:text-6xl laptop:text-6xl font-serif text-center">
+-            Let&apos;s Work Together
+-          </h1>
+-        </div>
+-      </div>
++      {/* ── Contact Section ─────────────────────────────────────── */}
++      <section ref={contactRef} className="py-14 lg:py-20 border-t border-white/10">
++        <div className="max-w-5xl mx-auto px-2 lg:px-0">
++          <div className="grid lg:grid-cols-2 gap-10 items-start">
++            {/* Left — CTA copy */}
++            <div>
++              <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-3">
++                Contact
++              </span>
++              <h2 className="text-3xl lg:text-4xl font-serif text-cream mb-4 leading-tight">
++                Let&apos;s build something together.
++              </h2>
++              <p className="text-sm text-cream/60 mb-6 max-w-sm">
++                Open for freelance projects — web development, design systems, and digital experiences. Reach out and let&apos;s talk.
++              </p>
++
++              {/* Social links */}
++              <div className="flex gap-5">
++                {socials.map((s) => (
++                  <a
++                    key={s.name}
++                    href={s.href}
++                    target="_blank"
++                    rel="noopener noreferrer"
++                    aria-label={s.name}
++                    className="text-cream/40 hover:text-cream transition-colors duration-200"
++                  >
++                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
++                      <path fillRule={s.name === "Instagram" || s.name === "GitHub" ? "evenodd" : undefined} d={s.icon} clipRule={s.name === "Instagram" || s.name === "GitHub" ? "evenodd" : undefined} />
++                    </svg>
++                  </a>
++                ))}
++              </div>
++            </div>
+ 
+-      <footer className="">
+-        <div className="mx-auto max-w-7xl overflow-hidden px-6 py-8 sm:py-4 lg:px-8">
+-          <div className="flex justify-center space-x-10 mb-8">
+-            {navigation.social.map((item) => (
+-              <a
+-                key={item.name}
+-                href={item.href}
+-                className="text-olive hover:text-slate transition-colors duration-200"
++            {/* Right — Form */}
++            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
++              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
++                <div>
++                  <label className="block text-xs font-medium text-cream/40 mb-1.5 tracking-wide">Name</label>
++                  <input
++                    type="text"
++                    name="name"
++                    value={form.name}
++                    onChange={handleChange}
++                    required
++                    placeholder="Your name"
++                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-cream placeholder-cream/25 focus:outline-none focus:border-white/30 transition-colors duration-200"
++                  />
++                </div>
++                <div>
++                  <label className="block text-xs font-medium text-cream/40 mb-1.5 tracking-wide">Email</label>
++                  <input
++                    type="email"
++                    name="email"
++                    value={form.email}
++                    onChange={handleChange}
++                    required
++                    placeholder="your@email.com"
++                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-cream placeholder-cream/25 focus:outline-none focus:border-white/30 transition-colors duration-200"
++                  />
++                </div>
++              </div>
++              <div>
++                <label className="block text-xs font-medium text-cream/40 mb-1.5 tracking-wide">Message</label>
++                <textarea
++                  name="message"
++                  value={form.message}
++                  onChange={handleChange}
++                  required
++                  rows={5}
++                  placeholder="Tell me about your project..."
++                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-cream placeholder-cream/25 focus:outline-none focus:border-white/30 transition-colors duration-200 resize-none"
++                />
++              </div>
++              <button
++                type="submit"
++                className="w-full bg-cream text-graphite-black py-3.5 rounded-xl text-sm font-semibold hover:bg-cream-accent transition-colors duration-200 flex items-center justify-center gap-2"
+               >
+-                <span className="sr-only">{item.name}</span>
+-                <item.icon className="h-6 w-6" aria-hidden="true" />
+-              </a>
+-            ))}
++                {sent ? "Opening email client…" : "Send Message"}
++                {!sent && (
++                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
++                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
++                  </svg>
++                )}
++              </button>
++            </form>
+           </div>
+-          <p className="text-md mt-8 laptop:mt-32 p-2 laptop:p-0 text-center text-olive">
+-            Developed by{" "}
++        </div>
++      </section>
++
++      {/* ── Footer bar ──────────────────────────────────────────── */}
++      <div className="border-t border-white/8 py-6 px-2 lg:px-0">
++        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
++          <p className="text-xs text-cream/25">© {new Date().getFullYear()} Bryan Lordeus. All rights reserved.</p>
++          <p className="text-xs text-cream/25">
++            Built by{" "}
+             <Link href="#">
+-              <a className="underline underline-offset-2 hover:text-slate transition-colors">
+-                Bryan Lordeus
+-              </a>
++              <a className="hover:text-cream/50 transition-colors underline underline-offset-2">Bryan Lordeus</a>
+             </Link>
+           </p>
+         </div>
+-      </footer>
++      </div>
+     </>
+   );
+ };
+ 
+-export default Footer;
+\ No newline at end of file
++export default Footer;
+diff --git a/components/Header/index.js b/components/Header/index.js
+index 28c829b..e01d456 100644
+--- a/components/Header/index.js
++++ b/components/Header/index.js
+@@ -1,200 +1,136 @@
+-import { Popover } from "@headlessui/react";
++import { useState, useEffect } from "react";
+ import { useRouter } from "next/router";
+-import React from "react";
+ import Image from "next/image";
+-import Button from "../Button";
+-// Local Data
+ import data from "../../data/portfolio-updated.json";
+ 
+-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
++const Header = ({ handleWorkScroll, handleAboutScroll, handleServicesScroll, handleContactScroll, isBlog }) => {
+   const router = useRouter();
+-  const { name, showBlog, showResume } = data;
++  const { name, showBlog } = data;
++  const [menuOpen, setMenuOpen] = useState(false);
+ 
+-  return (
+-    <>
+-      {/* Mobile Menu - Hidden on desktop */}
+-      <Popover className="block lg:hidden mt-5">
+-        {({ open }) => (
+-          <>
+-            <div className="flex items-center justify-between p-2">
+-              <Image
+-                className="h-6"
+-                src="/images/my-logo-04.svg"
+-                alt="My logo"
+-                width={70}
+-                height={70}
+-                priority
+-                onClick={() => router.push("/")}
+-                style={{ cursor: "pointer" }}
+-              />
++  // Lock body scroll when menu is open
++  useEffect(() => {
++    if (menuOpen) {
++      document.body.style.overflow = "hidden";
++    } else {
++      document.body.style.overflow = "";
++    }
++    return () => { document.body.style.overflow = ""; };
++  }, [menuOpen]);
+ 
+-              <div className="flex items-center">
+-                <Popover.Button>
+-                  <Image
+-                    className="h-5"
+-                    src={`/images/${!open ? "menu.svg" : "cancel.svg"}`}
+-                    alt={!open ? "Open menu" : "Close menu"}
+-                    width={26}
+-                    height={26}
+-                    priority
+-                  />
+-                </Popover.Button>
+-              </div>
+-            </div>
+-            <Popover.Panel
+-              className="absolute right-0 z-10 w-11/12 p-4 bg-white shadow-md rounded-md"
+-            >
+-              {!isBlog ? (
+-                <div className="grid grid-cols-1">
+-                  <Button onClick={handleWorkScroll}>Work</Button>
+-                  <Button onClick={handleAboutScroll}>About</Button>
+-                  {showBlog && (
+-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
+-                  )}
++  const close = () => setMenuOpen(false);
+ 
+-                  <Button
+-                    onClick={() =>
+-                      window.open("https://bryanlordeus.myportfolio.com")
+-                    }
+-                  >
+-                    Creative Work
+-                  </Button>
++  const navItems = isBlog
++    ? [
++        { label: "Home", action: () => { router.push("/"); close(); } },
++        ...(showBlog ? [{ label: "Blog", action: () => { router.push("/blog"); close(); } }] : []),
++        { label: "Contact", action: () => { window.open("mailto:imaginedbybryan@gmail.com"); close(); } },
++      ]
++    : [
++        { label: "Work", action: () => { handleWorkScroll?.(); close(); } },
++        { label: "About", action: () => { handleAboutScroll?.(); close(); } },
++        { label: "Services", action: () => { handleServicesScroll?.(); close(); } },
++        { label: "Contact", action: () => { handleContactScroll?.(); close(); } },
++        ...(showBlog ? [{ label: "Blog", action: () => { router.push("/blog"); close(); } }] : []),
++      ];
+ 
+-                  <Button
+-                    onClick={() =>
+-                      window.open("https://casestudiesbybryan.myportfolio.com")
+-                    }
+-                  >
+-                    Case Studies
+-                  </Button>
++  return (
++    <>
++      {/* ── Top Bar ─────────────────────────────────────────────── */}
++      <header className="flex items-center justify-between px-5 py-5 lg:px-0 lg:py-8">
++        {/* Logo */}
++        <button
++          onClick={() => router.push("/")}
++          className="focus:outline-none"
++          aria-label="Home"
++        >
++          <Image
++            src="/images/my-logo-04.svg"
++            alt="Bryan Lordeus logo"
++            width={52}
++            height={52}
++            priority
++            className="opacity-90 hover:opacity-100 transition-opacity duration-200 invert"
++          />
++        </button>
+ 
+-                  <Button
+-                    onClick={() =>
+-                      window.open("mailto:imaginedbybryan@gmail.com")
+-                    }
+-                  >
+-                    Contact
+-                  </Button>
+-                </div>
+-              ) : (
+-                <div className="grid grid-cols-1">
+-                  <Button onClick={() => router.push("/")} classes="first:ml-1">
+-                    Home
+-                  </Button>
+-                  {showBlog && (
+-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
+-                  )}
++        {/* Desktop nav */}
++        <nav className="hidden lg:flex items-center gap-8">
++          {navItems.map((item) => (
++            <button
++              key={item.label}
++              onClick={item.action}
++              className="text-sm font-medium text-cream/60 hover:text-cream tracking-wide transition-colors duration-200"
++            >
++              {item.label}
++            </button>
++          ))}
++        </nav>
+ 
+-                  <Button
+-                    onClick={() =>
+-                      window.open("https://bryanlordeus.myportfolio.com")
+-                    }
+-                  >
+-                    Creative Work
+-                  </Button>
++        {/* Mobile hamburger */}
++        <button
++          onClick={() => setMenuOpen(true)}
++          className="lg:hidden flex flex-col gap-1.5 p-1 focus:outline-none"
++          aria-label="Open menu"
++        >
++          <span className="block w-6 h-0.5 bg-cream rounded-full transition-all duration-200" />
++          <span className="block w-4 h-0.5 bg-cream rounded-full transition-all duration-200" />
++          <span className="block w-5 h-0.5 bg-cream rounded-full transition-all duration-200" />
++        </button>
++      </header>
+ 
+-                  <Button
+-                    onClick={() =>
+-                      window.open("https://casestudiesbybryan.myportfolio.com")
+-                    }
+-                  >
+-                    Case Studies
+-                  </Button>
++      {/* ── Mobile slide-in overlay ──────────────────────────────── */}
++      {/* Backdrop */}
++      <div
++        onClick={close}
++        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
++          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
++        }`}
++      />
+ 
+-                  <Button
+-                    onClick={() =>
+-                      window.open("mailto:imaginedbybryan@gmail.com")
+-                    }
+-                  >
+-                    Contact
+-                  </Button>
+-                </div>
+-              )}
+-            </Popover.Panel>
+-          </>
+-        )}
+-      </Popover>
++      {/* Drawer */}
++      <div
++        className={`fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-graphite-mid border-l border-white/10 flex flex-col transition-transform duration-300 ease-in-out lg:hidden ${
++          menuOpen ? "translate-x-0" : "translate-x-full"
++        }`}
++      >
++        {/* Drawer header */}
++        <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
++          <Image
++            src="/images/my-logo-04.svg"
++            alt="logo"
++            width={36}
++            height={36}
++            className="invert opacity-80"
++          />
++          <button onClick={close} className="focus:outline-none" aria-label="Close menu">
++            <svg className="w-6 h-6 text-cream/70 hover:text-cream transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
++              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
++            </svg>
++          </button>
++        </div>
+ 
+-      {/* Desktop Nav - Hidden on mobile */}
+-      <div className="mt-10 hidden lg:flex flex-row items-center justify-between top-0 z-10 py-4">
+-        <Image
+-          className="h-12"
+-          src="/images/my-logo-04.svg"
+-          alt="My logo"
+-          width={60}
+-          height={60}
+-          priority
+-          onClick={() => router.push("/")}
+-          style={{ cursor: "pointer" }}
+-        />
+-        {!isBlog ? (
+-          <nav className="flex gap-8 items-center">
+-            <button 
+-              onClick={handleWorkScroll}
+-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
+-            >
+-              Work
+-            </button>
+-            <button 
+-              onClick={handleAboutScroll}
+-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
++        {/* Nav items */}
++        <nav className="flex flex-col gap-1 px-4 py-8 flex-1">
++          {navItems.map((item, i) => (
++            <button
++              key={item.label}
++              onClick={item.action}
++              className="text-left px-4 py-4 text-xl font-serif text-cream/80 hover:text-cream hover:bg-white/5 rounded-xl transition-all duration-200"
++              style={{ animationDelay: `${i * 60}ms` }}
+             >
+-              About
++              {item.label}
+             </button>
+-            {showBlog && (
+-              <button 
+-                onClick={() => router.push("/blog")}
+-                className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
+-              >
+-                Blog
+-              </button>
+-            )}
+-            <button 
+-              onClick={() => window.open("https://bryanlordeus.myportfolio.com")}
+-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
+-            >
+-              Creative Work
+-            </button>
+-            <button 
+-              onClick={() => window.open("https://casestudiesbybryan.myportfolio.com")}
+-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
+-            >
+-              Case Studies
+-            </button>
+-            <button 
+-              onClick={() => window.open("mailto:imaginedbybryan@gmail.com")}
+-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
+-            >
+-              Contact
+-            </button>
+-          </nav>
+-        ) : (
+-          <nav className="flex gap-8 items-center">
+-            <button 
+-              onClick={() => router.push("/")}
+-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
+-            >
+-              Home
+-            </button>
+-            {showBlog && (
+-              <button 
+-                onClick={() => router.push("/blog")}
+-                className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
+-              >
+-                Blog
+-              </button>
+-            )}
+-            <button 
+-              onClick={() => window.open("mailto:imaginedbybryan@gmail.com")}
+-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
+-            >
+-              Contact
+-            </button>
+-          </nav>
+-        )}
++          ))}
++        </nav>
++
++        {/* Drawer footer */}
++        <div className="px-8 py-6 border-t border-white/10">
++          <p className="text-xs text-cream/30 tracking-widest uppercase">Imagined by Bryan</p>
++        </div>
+       </div>
+     </>
+   );
+ };
+ 
+-export default Header;
+\ No newline at end of file
++export default Header;
+diff --git a/components/ProjectFilter/index.js b/components/ProjectFilter/index.js
+index f7bfb71..b92c6d9 100644
+--- a/components/ProjectFilter/index.js
++++ b/components/ProjectFilter/index.js
+@@ -1,23 +1,19 @@
+-// components/ProjectFilter.js
+ export default function ProjectFilter({ categories, activeCategory, onFilterChange }) {
+   return (
+-    <div className="flex flex-wrap justify-center gap-3 mb-8 laptop:mb-12">
++    <div className="flex flex-col gap-1">
+       {categories.map((category) => (
+         <button
+           key={category.id}
+           onClick={() => onFilterChange(category.id)}
+-          className={`
+-            px-4 py-2 rounded-lg transition-all duration-300 text-sm laptop:text-base font-medium
+-            ${
+-              activeCategory === category.id
+-                ? 'bg-slate text-cream shadow-lg transform scale-105'
+-                : 'bg-cream-accent text-slate hover:bg-slate hover:text-cream'
+-            }
+-          `}
++          className={`text-left text-sm transition-colors duration-200 py-1.5 ${
++            activeCategory === category.id
++              ? "text-cream font-semibold"
++              : "text-cream/40 hover:text-cream/70 font-normal"
++          }`}
+         >
+           {category.name}
+         </button>
+       ))}
+     </div>
+   );
+-}
+\ No newline at end of file
++}
+diff --git a/components/ProjectGallery/index.js b/components/ProjectGallery/index.js
+index f3de54b..0c9db67 100644
+--- a/components/ProjectGallery/index.js
++++ b/components/ProjectGallery/index.js
+@@ -28,12 +28,12 @@ export default function ProjectGallery({ projects, activeCategory }) {
+     <div className={`transition-opacity duration-300 ${isAnimating ? 'opacity-50' : 'opacity-100'}`}>
+       {filteredProjects.length === 0 ? (
+         <div className="text-center py-20">
+-          <p className="text-2xl text-gray-500">
++          <p className="text-2xl text-cream/40">
+             No projects in this category yet.
+           </p>
+         </div>
+       ) : (
+-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
++        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 lg:gap-4">
+           {filteredProjects.map((project) => (
+             <WorkCard
+               key={project.id}
+diff --git a/components/WorkCard/index.js b/components/WorkCard/index.js
+index 32026e1..5f1a237 100644
+--- a/components/WorkCard/index.js
++++ b/components/WorkCard/index.js
+@@ -1,15 +1,12 @@
+-// components/WorkCard.js
+ import Image from 'next/image';
+-import React from 'react';
+ 
+ const WorkCard = ({ img, name, description, results, onClick, sourceURL, showSource }) => {
+-  // Parse tech stack from description
+-  const techStack = description ? description.split('|').map(tech => tech.trim()) : [];
++  const techStack = description ? description.split('|').map((t) => t.trim()) : [];
+ 
+   return (
+-    <div className="group overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col">
+-      {/* Image Container */}
+-      <div className="relative overflow-hidden" style={{ paddingTop: '60%' }}>
++    <div className="group overflow-hidden rounded-2xl bg-graphite-mid border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col">
++      {/* Image */}
++      <div className="relative overflow-hidden" style={{ paddingTop: '62%' }}>
+         {img && (
+           <Image
+             src={img}
+@@ -18,57 +15,49 @@ const WorkCard = ({ img, name, description, results, onClick, sourceURL, showSou
+             className="object-cover transition-transform duration-500 group-hover:scale-105"
+           />
+         )}
+-        {/* Gradient Overlay */}
+-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
++        <div className="absolute inset-0 bg-gradient-to-t from-graphite-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+       </div>
+ 
+-      {/* Content Container */}
+-      <div className="p-5 flex flex-col flex-grow">
+-        {/* Title */}
+-        <h3 className="text-xl font-bold text-graphite mb-2 line-clamp-2">
+-          {name || "Project Name"}
++      {/* Content */}
++      <div className="p-4 flex flex-col flex-grow">
++        <h3 className="text-base font-semibold text-cream mb-2 leading-snug line-clamp-2">
++          {name || "Project"}
+         </h3>
+ 
+-        {/* Tech Stack Tags */}
+-        <div className="flex flex-wrap gap-2 mb-4">
+-          {techStack.slice(0, 4).map((tech, index) => (
+-            <span
+-              key={index}
+-              className="px-3 py-1 text-xs font-medium bg-cream-accent text-slate rounded-full"
+-            >
++        {/* Tech tags */}
++        <div className="flex flex-wrap gap-1.5 mb-3">
++          {techStack.slice(0, 3).map((tech, i) => (
++            <span key={i} className="px-2 py-0.5 text-2xs font-medium bg-white/8 text-cream/60 rounded-full border border-white/10">
+               {tech}
+             </span>
+           ))}
+         </div>
+ 
+-        {/* Results - if available */}
+         {results && (
+-          <p className="text-sm text-olive mb-4 italic">
+-            {results}
+-          </p>
++          <p className="text-xs text-olive-tint mb-3 italic line-clamp-2">{results}</p>
+         )}
+ 
+-        {/* Spacer */}
+-        <div className="flex-grow"></div>
++        <div className="flex-grow" />
+ 
+-        {/* Action Buttons */}
+-        <div className="flex gap-3 mt-4">
++        {/* Actions */}
++        <div className="flex gap-2 mt-3">
+           <button
+             onClick={onClick}
+-            className="flex-1 bg-slate text-cream px-4 py-2.5 rounded-lg font-medium hover:bg-pine transition-colors duration-200 flex items-center justify-center gap-2"
++            className="flex-1 bg-cream text-graphite-black px-3 py-2 rounded-xl text-xs font-semibold hover:bg-cream-accent transition-colors duration-200 flex items-center justify-center gap-1.5"
+           >
+             View Live
+-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
++            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+             </svg>
+           </button>
+-          
++
+           {showSource && (
+             <button
+               onClick={() => window.open(sourceURL)}
+-              className="px-4 py-2.5 border-2 border-slate text-slate rounded-lg font-medium hover:bg-slate hover:text-cream transition-colors duration-200"
++              className="px-3 py-2 border border-white/15 text-cream/60 rounded-xl hover:border-white/30 hover:text-cream transition-all duration-200"
++              aria-label="View source"
+             >
+-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
++              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+               </svg>
+             </button>
+@@ -79,4 +68,4 @@ const WorkCard = ({ img, name, description, results, onClick, sourceURL, showSou
+   );
+ };
+ 
+-export default WorkCard;
+\ No newline at end of file
++export default WorkCard;
+diff --git a/next.config.js b/next.config.js
+index f0d46ca..189726f 100644
+--- a/next.config.js
++++ b/next.config.js
+@@ -3,7 +3,7 @@
+ const nextConfig = {
+   reactStrictMode: true,
+   images: {
+-    domains: ['images2.imgbox.com'], // Add your image domains here
++    domains: ['images2.imgbox.com', 'i.ibb.co', 'via.placeholder.com'],
+   },
+ };
+ 
+diff --git a/pages/index.js b/pages/index.js
+index 6242feb..cf86f0d 100644
+--- a/pages/index.js
++++ b/pages/index.js
+@@ -1,4 +1,3 @@
+-// pages/index.js - With About Section
+ import { useRef, useState } from "react";
+ import Header from "../components/Header";
+ import Socials from "../components/Socials";
+@@ -7,43 +6,48 @@ import { useIsomorphicLayoutEffect } from "../utils";
+ import { stagger } from "../animations";
+ import Footer from "../components/Footer";
+ import Head from "next/head";
+-import Button from "../components/Button";
+ import Link from "next/link";
+ import Cursor from "../components/Cursor";
+-import ProjectGallery from "../components/ProjectGallery"; 
++import ProjectGallery from "../components/ProjectGallery";
+ import ProjectFilter from "../components/ProjectFilter";
+ import BehanceBanner from "../components/BehanceBanner";
+-
+-// Local Data
+ import data from "../data/portfolio-updated.json";
+ 
++const services = [
++  {
++    number: "01",
++    title: "Web Development",
++    description: "Translating designs into fast, responsive web experiences — from marketing sites to full-stack applications.",
++    tags: ["React", "Next.js", "Tailwind"],
++  },
++  {
++    number: "02",
++    title: "UI/UX Design",
++    description: "Designing intuitive interfaces that guide users naturally and make complex things feel simple.",
++    tags: ["Figma", "Prototyping", "Design Systems"],
++  },
++  {
++    number: "03",
++    title: "Digital Marketing",
++    description: "Content strategy, social media management, and creative campaigns that build audiences and drive results.",
++    tags: ["Social Media", "Branding", "Strategy"],
++  },
++];
++
+ export default function Home() {
+-  // State for filtering
+-  const [activeCategory, setActiveCategory] = useState('all');
++  const [activeCategory, setActiveCategory] = useState("all");
+ 
+-  // Ref
+   const workRef = useRef();
+   const aboutRef = useRef();
++  const servicesRef = useRef();
++  const contactRef = useRef();
+   const textOne = useRef();
+   const textTwo = useRef();
+   const textThree = useRef();
+   const textFour = useRef();
+ 
+-  // Handling Scroll
+-  const handleWorkScroll = () => {
+-    window.scrollTo({
+-      top: workRef.current.offsetTop,
+-      left: 0,
+-      behavior: "smooth",
+-    });
+-  };
+-
+-  const handleAboutScroll = () => {
+-    window.scrollTo({
+-      top: aboutRef.current.offsetTop,
+-      left: 0,
+-      behavior: "smooth",
+-    });
++  const scrollTo = (ref) => {
++    window.scrollTo({ top: ref.current.offsetTop - 20, behavior: "smooth" });
+   };
+ 
+   useIsomorphicLayoutEffect(() => {
+@@ -55,89 +59,176 @@ export default function Home() {
+   }, []);
+ 
+   return (
+-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
++    <div className={`relative bg-graphite-black min-h-screen ${data.showCursor && "cursor-none"}`}>
+       {data.showCursor && <Cursor />}
+       <Head>
+         <title>{data.name}</title>
+       </Head>
+ 
+-      <div className="gradient-circle"></div>
+-      <div className="gradient-circle-bottom"></div>
+-
+-      <div className="container mx-auto mb-10">
++      <div className="max-w-5xl mx-auto px-5 lg:px-0">
+         <Header
+-          handleWorkScroll={handleWorkScroll}
+-          handleAboutScroll={handleAboutScroll}
++          handleWorkScroll={() => scrollTo(workRef)}
++          handleAboutScroll={() => scrollTo(aboutRef)}
++          handleServicesScroll={() => scrollTo(servicesRef)}
++          handleContactScroll={() => scrollTo(contactRef)}
+         />
+-        <div className="laptop:mt-16 mt-12">
+-          <div className="mt-5">
++
++        {/* ── Hero ──────────────────────────────────────────────── */}
++        <section className="pt-10 pb-16 lg:pt-14 lg:pb-20">
++          <div className="max-w-3xl">
++            <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-4">
++              Available for freelance
++            </span>
+             <h1
+               ref={textOne}
+-              className="text-6xl tablet:text-5xl laptop:text-6xl laptopl:text-7xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
++              className="text-5xl lg:text-6xl font-serif text-cream leading-tight mb-1"
+             >
+               {data.headerTaglineOne}
+             </h1>
+             <h1
+               ref={textTwo}
+-              className="text-5xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
++              className="text-4xl lg:text-5xl font-serif text-cream/80 leading-tight mb-1"
+             >
+               {data.headerTaglineTwo}
+             </h1>
+-            <h1
+-              ref={textThree}
+-              className="text-3xl tablet:text-3xl laptop:text-4xl laptopl:text-5xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
++            {data.headerTaglineThree && (
++              <h2
++                ref={textThree}
++                className="text-xl lg:text-2xl font-sans font-light text-cream/50 mt-3 mb-1"
++              >
++                {data.headerTaglineThree}
++              </h2>
++            )}
++            {data.headerTaglineFour && (
++              <p
++                ref={textFour}
++                className="text-base text-cream/40 mt-1"
++              >
++                {data.headerTaglineFour}
++              </p>
++            )}
++          </div>
++
++          <div className="mt-7 flex flex-wrap items-center gap-3">
++            <button
++              onClick={() => scrollTo(workRef)}
++              className="bg-cream text-graphite-black px-6 py-3 rounded-xl text-sm font-semibold hover:bg-cream-accent transition-colors duration-200"
+             >
+-              {data.headerTaglineThree}
+-            </h1>
+-            <h1
+-              ref={textFour}
+-              className="text-3xl tablet:text-3xl laptop:text-4xl laptopl:text-5xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
++              View Work
++            </button>
++            <button
++              onClick={() => scrollTo(contactRef)}
++              className="border border-white/20 text-cream/70 px-6 py-3 rounded-xl text-sm font-semibold hover:border-white/40 hover:text-cream transition-all duration-200"
+             >
+-              {data.headerTaglineFour}
+-            </h1>
++              Get in Touch
++            </button>
+           </div>
+ 
+-          <Socials className="mt-4 laptop:mt-4" />
+-        </div>
++          <div className="mt-5">
++            <Socials />
++          </div>
++        </section>
+ 
+-        {/* About Section */}
++        {/* ── About ─────────────────────────────────────────────── */}
+         <div ref={aboutRef}>
+           <About aboutContent={data.aboutContent} />
+         </div>
+-        
+-        <div className="mt-16 laptop:mt-16 p-2 laptop:p-0" ref={workRef}>
+-          <h1 className="text-5xl laptop:text-5xl font-serif text-center mb-8">Web Development</h1>
+-          
+-          {/* Filter Component */}
+-          <ProjectFilter 
+-            categories={data.projectCategories}
+-            activeCategory={activeCategory}
+-            onFilterChange={setActiveCategory}
+-          />
+-          
+-          {/* Project Gallery */}
+-          <div className="mt-6 laptop:mt-8">
+-            <ProjectGallery 
+-              projects={data.projects} 
+-              activeCategory={activeCategory}
+-            />
++
++        {/* ── Services ──────────────────────────────────────────── */}
++        <section ref={servicesRef} className="py-14 lg:py-20 border-t border-white/10">
++          <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-3">
++            Services
++          </span>
++          <h2 className="text-3xl lg:text-4xl font-serif text-cream mb-8">
++            What I do.
++          </h2>
++
++          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
++            {services.map((s) => (
++              <div
++                key={s.number}
++                className="group p-5 lg:p-6 rounded-2xl bg-graphite-mid border border-white/10 hover:border-white/20 transition-all duration-300"
++              >
++                <span className="block text-xs font-semibold tracking-widest text-olive-tint mb-4">
++                  {s.number}
++                </span>
++                <h3 className="text-lg font-serif text-cream mb-2">{s.title}</h3>
++                <p className="text-sm text-cream/55 leading-relaxed mb-4">{s.description}</p>
++                <div className="flex flex-wrap gap-2">
++                  {s.tags.map((tag) => (
++                    <span key={tag} className="px-2.5 py-1 text-2xs font-medium bg-white/8 text-cream/50 rounded-full border border-white/10">
++                      {tag}
++                    </span>
++                  ))}
++                </div>
++              </div>
++            ))}
+           </div>
+-        </div>
++        </section>
+ 
+-        {/* Behance Banner for Marketing Work */}
++        {/* ── Work ──────────────────────────────────────────────── */}
++        <section ref={workRef} className="py-14 lg:py-20 border-t border-white/10">
++          <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-3">
++            Work
++          </span>
++          <h2 className="text-3xl lg:text-4xl font-serif text-cream mb-8">
++            Web Development
++          </h2>
++
++          {/* Sidebar layout: filters left, grid right */}
++          <div className="flex gap-0">
++            {/* Filter sidebar */}
++            <div className="hidden md:flex flex-col w-40 shrink-0 pr-6 border-r border-white/10">
++              <ProjectFilter
++                categories={data.projectCategories}
++                activeCategory={activeCategory}
++                onFilterChange={setActiveCategory}
++              />
++            </div>
++
++            {/* Mobile: horizontal pills */}
++            <div className="flex md:hidden flex-wrap gap-2 mb-6 w-full">
++              {data.projectCategories.map((cat) => (
++                <button
++                  key={cat.id}
++                  onClick={() => setActiveCategory(cat.id)}
++                  className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
++                    activeCategory === cat.id
++                      ? "bg-cream text-graphite-black"
++                      : "bg-white/8 text-cream/60 border border-white/10 hover:text-cream"
++                  }`}
++                >
++                  {cat.name}
++                </button>
++              ))}
++            </div>
++
++            {/* Project grid */}
++            <div className="flex-1 md:pl-8">
++              <ProjectGallery
++                projects={data.projects}
++                activeCategory={activeCategory}
++              />
++            </div>
++          </div>
++        </section>
++
++        {/* ── Behance ───────────────────────────────────────────── */}
+         <BehanceBanner behanceUrl={data.behanceUrl} />
+ 
+-        {/* This button should not go into production */}
++        {/* Dev-only edit button */}
+         {process.env.NODE_ENV === "development" && (
+-          <div className="fixed bottom-5 right-5">
++          <div className="fixed bottom-5 right-5 z-50">
+             <Link href="/edit">
+-              <Button type="primary">Edit Data</Button>
++              <a className="bg-cream text-graphite-black px-4 py-2 rounded-xl text-sm font-semibold">
++                Edit Data
++              </a>
+             </Link>
+           </div>
+         )}
+-     
+-        <Footer />
++
++        <Footer contactRef={contactRef} />
+       </div>
+     </div>
+   );
+-}
+\ No newline at end of file
++}
+diff --git a/styles/globals.css b/styles/globals.css
+index d9310ba..dff95ee 100644
+--- a/styles/globals.css
++++ b/styles/globals.css
+@@ -39,21 +39,21 @@
+   --color-graphite-mid:   #2D2D2D;
+   --color-graphite-black: #121212;
+ 
+-  /* Semantic tokens */
+-  --bg-primary:           var(--color-cream);
+-  --bg-secondary:         var(--color-cream-tint);
+-  --bg-accent:            var(--color-cream-accent);
+-  --bg-dark:              var(--color-graphite);
++  /* Semantic tokens — dark theme */
++  --bg-primary:           var(--color-graphite-black);
++  --bg-secondary:         var(--color-graphite);
++  --bg-accent:            var(--color-graphite-mid);
++  --bg-dark:              var(--color-graphite-black);
+   --bg-dark-alt:          var(--color-ink);
+ 
+-  --text-primary:         var(--color-graphite);
+-  --text-secondary:       var(--color-slate);
+-  --text-muted:           var(--color-olive);
+-  --text-inverse:         var(--color-cream);
++  --text-primary:         var(--color-cream);
++  --text-secondary:       var(--color-cream-accent);
++  --text-muted:           var(--color-olive-tint);
++  --text-inverse:         var(--color-graphite);
+ 
+-  --border-light:         var(--color-cream-accent);
+-  --border-mid:           var(--color-olive-tint);
+-  --border-dark:          var(--color-slate);
++  --border-light:         rgba(244, 240, 232, 0.1);
++  --border-mid:           rgba(244, 240, 232, 0.2);
++  --border-dark:          rgba(244, 240, 232, 0.35);
+ 
+   --accent-primary:       var(--color-slate);
+   --accent-secondary:     var(--color-pine);
+@@ -155,28 +155,28 @@
+ 
+   /* ── Cards ── */
+   .card {
+-    @apply bg-cream-tint border border-cream-accent rounded-none 
+-           shadow-card transition-shadow duration-200 hover:shadow-card-md;
++    @apply bg-graphite-mid border border-white/10 rounded-2xl
++           shadow-card transition-all duration-300 hover:shadow-card-md hover:border-white/20;
+   }
+ 
+   .card-dark {
+-    @apply bg-slate-dark text-cream border border-slate-accent
+-           rounded-none shadow-slate;
++    @apply bg-graphite-mid text-cream border border-white/10
++           rounded-2xl shadow-slate;
+   }
+ 
+   /* ── Nav Link ── */
+   .nav-link {
+-    @apply text-sm font-medium text-graphite hover:text-slate
++    @apply text-sm font-medium text-cream/70 hover:text-cream
+            transition-colors duration-200 relative
+            after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px
+-           after:bg-slate after:transition-all after:duration-200
++           after:bg-cream after:transition-all after:duration-200
+            hover:after:w-full;
+   }
+ 
+   /* ── Tag / Badge ── */
+   .tag {
+     @apply inline-block px-2.5 py-0.5 text-2xs font-semibold
+-           tracking-widest uppercase bg-cream-accent text-slate;
++           tracking-widest uppercase bg-white/10 text-cream/80;
+   }
+ 
+   .tag-pine {

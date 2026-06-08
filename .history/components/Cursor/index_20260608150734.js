@@ -5,7 +5,7 @@ import "custom-cursor-react/dist/index.css";
 const Cursor = () => {
   const [mount, setMount] = useState();
 
-  const getCusomColor = () => "#A1A7A2";
+  const getCusomColor = () => "#F4F0E8";
 
   useEffect(() => {
     setMount(true);
@@ -16,7 +16,7 @@ const Cursor = () => {
         <CustomCursor
           targets={[".link"]}
           customClass="custom-cursor"
-          dimensions={30}
+          dimensions={40}
           fill={getCusomColor()}
           smoothness={{
             movement: 0.2,

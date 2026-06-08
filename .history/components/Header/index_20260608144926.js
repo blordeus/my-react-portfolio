@@ -1,15 +1,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import data from "../../data/portfolio-updated.json";
 
-const Header = ({
-  handleWorkScroll,
-  handleAboutScroll,
-  handleServicesScroll,
-  handleContactScroll,
-  isBlog,
-}) => {
+const Header = ({ handleWorkScroll, handleAboutScroll, handleServicesScroll, handleContactScroll, isBlog }) => {
   const router = useRouter();
   const { showBlog } = data;
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,106 +14,47 @@ const Header = ({
     } else {
       document.body.style.overflow = "";
     }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
   const close = () => setMenuOpen(false);
 
   const navItems = isBlog
     ? [
-        {
-          label: "Home",
-          action: () => {
-            router.push("/");
-            close();
-          },
-        },
-        ...(showBlog
-          ? [
-              {
-                label: "Blog",
-                action: () => {
-                  router.push("/blog");
-                  close();
-                },
-              },
-            ]
-          : []),
-        {
-          label: "Contact",
-          action: () => {
-            window.open("mailto:imaginedbybryan@gmail.com");
-            close();
-          },
-        },
+        { label: "Home", action: () => { router.push("/"); close(); } },
+        ...(showBlog ? [{ label: "Blog", action: () => { router.push("/blog"); close(); } }] : []),
+        { label: "Contact", action: () => { window.open("mailto:imaginedbybryan@gmail.com"); close(); } },
       ]
     : [
-        {
-          label: "Work",
-          action: () => {
-            handleWorkScroll?.();
-            setActive("Work");
-            close();
-          },
-        },
-        {
-          label: "About",
-          action: () => {
-            handleAboutScroll?.();
-            setActive("About");
-            close();
-          },
-        },
-        {
-          label: "Services",
-          action: () => {
-            handleServicesScroll?.();
-            setActive("Services");
-            close();
-          },
-        },
-        ...(showBlog
-          ? [
-              {
-                label: "Blog",
-                action: () => {
-                  router.push("/blog");
-                  close();
-                },
-              },
-            ]
-          : []),
+        { label: "Work", action: () => { handleWorkScroll?.(); setActive("Work"); close(); } },
+        { label: "About", action: () => { handleAboutScroll?.(); setActive("About"); close(); } },
+        { label: "Services", action: () => { handleServicesScroll?.(); setActive("Services"); close(); } },
+        ...(showBlog ? [{ label: "Blog", action: () => { router.push("/blog"); close(); } }] : []),
       ];
 
   const initials = data.name
-    ? data.name
-        .split(" ")
-        .map((w) => w[0])
-        .join("")
-        .slice(0, 2)
-        .toUpperCase()
+    ? data.name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase()
     : "BL";
 
   return (
     <>
       <header className="flex items-center justify-between px-5 py-5 lg:px-0 lg:py-8">
+
         {/* Logo */}
-        <button
-          onClick={() => router.push("/")}
-          className="focus:outline-none"
-          aria-label="Home"
-        >
-          <Image
-            src="/images/my-logo-04.svg"
-            alt="Bryan Lordeus logo"
-            width={52}
-            height={52}
-            priority
-            className="opacity-90 hover:opacity-100 transition-opacity duration-200 invert"
-          />
-        </button>
+<button
+  onClick={() => router.push("/")}
+  className="focus:outline-none"
+  aria-label="Home"
+>
+  <Image
+    src="/images/my-logo-04.svg"
+    alt="Bryan Lordeus logo"
+    width={52}
+    height={52}
+    priority
+    className="opacity-90 hover:opacity-100 transition-opacity duration-200 invert"
+  />
+</button>
 
         <nav className="hidden lg:flex items-center gap-1 bg-graphite-mid border border-white/10 rounded-full px-2 py-1.5">
           {navItems.map((item) => (
@@ -143,9 +77,7 @@ const Header = ({
 
         <div className="flex items-center gap-3">
           <button
-            onClick={() => {
-              handleContactScroll?.();
-            }}
+            onClick={() => { handleContactScroll?.(); }}
             className="hidden lg:flex items-center px-5 py-2 text-sm font-semibold text-graphite-black bg-cream rounded-full hover:bg-cream-accent transition-colors duration-200"
           >
             Let&apos;s Talk
@@ -166,9 +98,7 @@ const Header = ({
       <div
         onClick={close}
         className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
-          menuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       />
 
@@ -178,26 +108,10 @@ const Header = ({
         }`}
       >
         <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
-          <span className="text-sm font-semibold text-cream/70 tracking-wide">
-            Menu
-          </span>
-          <button
-            onClick={close}
-            className="focus:outline-none"
-            aria-label="Close menu"
-          >
-            <svg
-              className="w-6 h-6 text-cream/70 hover:text-cream transition-colors"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M6 18L18 6M6 6l12 12"
-              />
+          <span className="text-sm font-semibold text-cream/70 tracking-wide">Menu</span>
+          <button onClick={close} className="focus:outline-none" aria-label="Close menu">
+            <svg className="w-6 h-6 text-cream/70 hover:text-cream transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
@@ -217,10 +131,7 @@ const Header = ({
 
         <div className="px-8 py-6 border-t border-white/10">
           <button
-            onClick={() => {
-              handleContactScroll?.();
-              close();
-            }}
+            onClick={() => { handleContactScroll?.(); close(); }}
             className="w-full py-3 text-sm font-semibold text-graphite-black bg-cream rounded-full hover:bg-cream-accent transition-colors duration-200"
           >
             Let&apos;s Talk

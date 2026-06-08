@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Image from "next/image";
+imp
 import data from "../../data/portfolio-updated.json";
 
 const Header = ({

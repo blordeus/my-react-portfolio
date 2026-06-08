@@ -5,7 +5,7 @@ const WorkCard = ({ img, name, description, results, onClick, sourceURL, showSou
 
   return (
     <div className="group overflow-hidden rounded-2xl bg-graphite-mid border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col">
-      <div className="relative overflow-hidden" style={{ paddingTop: '62%' }}>
+      <div className="relative overflow-hidden" style={{ paddingTop: '85%' }}>
         {img && (
           <Image
             src={img}

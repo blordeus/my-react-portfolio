@@ -234,8 +234,4 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-
-  a, button, [role="button"], input[type="submit"], input[type="button"], label[for] {
-  cursor: none;
-}
 }

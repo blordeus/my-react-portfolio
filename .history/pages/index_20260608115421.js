@@ -204,7 +204,7 @@ export default function Home() {
             </div>
 
             {/* Project grid */}
-            <div className="flex-1 min-w-0 md:pl-8">
+            <div className="flex-1 min-w-00 md:pl-8">
               <ProjectGallery
                 projects={data.projects}
                 activeCategory={activeCategory}

@@ -5,7 +5,8 @@ const WorkCard = ({ img, name, description, results, onClick, sourceURL, showSou
 
   return (
     <div className="group overflow-hidden rounded-2xl bg-graphite-mid border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col">
-      <div className="relative overflow-hidden" style={{ paddingTop: '62%' }}>
+      {/* Image */}
+      <div className="relative overflow-hidden" style={{ paddingTop: '85%' }}>
         {img && (
           <Image
             src={img}
@@ -17,11 +18,13 @@ const WorkCard = ({ img, name, description, results, onClick, sourceURL, showSou
         <div className="absolute inset-0 bg-gradient-to-t from-graphite-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
+      {/* Content */}
       <div className="p-4 flex flex-col flex-grow">
         <h3 className="text-base font-semibold text-cream mb-2 leading-snug line-clamp-2">
           {name || "Project"}
         </h3>
 
+        {/* Tech tags */}
         <div className="flex flex-wrap gap-1.5 mb-3">
           {techStack.slice(0, 3).map((tech, i) => (
             <span key={i} className="px-2 py-0.5 text-2xs font-medium bg-white/8 text-cream/60 rounded-full border border-white/10">
@@ -36,6 +39,7 @@ const WorkCard = ({ img, name, description, results, onClick, sourceURL, showSou
 
         <div className="flex-grow" />
 
+        {/* Actions */}
         <div className="flex gap-2 mt-3">
           <button
             onClick={onClick}

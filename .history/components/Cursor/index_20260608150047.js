@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
+import { useTheme } from "next-themes";
 
 const Cursor = () => {
+  const theme = useTheme();
   const [mount, setMount] = useState();
 
-  const getCusomColor = () => "#A1A7A2";
+  const getCusomColor = () => {
+    if (theme.theme === "dark") {
+      return "#F4F";
+    } else if (theme.theme === "light") {
+      return "#365349";
+    }
+  };
 
   useEffect(() => {
     setMount(true);
