@@ -39,21 +39,21 @@
   --color-graphite-mid:   #2D2D2D;
   --color-graphite-black: #121212;
 
-  /* Semantic tokens */
-  --bg-primary:           var(--color-cream);
-  --bg-secondary:         var(--color-cream-tint);
-  --bg-accent:            var(--color-cream-accent);
-  --bg-dark:              var(--color-graphite);
+  /* Semantic tokens — dark theme */
+  --bg-primary:           var(--color-graphite-black);
+  --bg-secondary:         var(--color-graphite);
+  --bg-accent:            var(--color-graphite-mid);
+  --bg-dark:              var(--color-graphite-black);
   --bg-dark-alt:          var(--color-ink);
 
-  --text-primary:         var(--color-graphite);
-  --text-secondary:       var(--color-slate);
-  --text-muted:           var(--color-olive);
-  --text-inverse:         var(--color-cream);
+  --text-primary:         var(--color-cream);
+  --text-secondary:       var(--color-cream-accent);
+  --text-muted:           var(--color-olive-tint);
+  --text-inverse:         var(--color-graphite);
 
-  --border-light:         var(--color-cream-accent);
-  --border-mid:           var(--color-olive-tint);
-  --border-dark:          var(--color-slate);
+  --border-light:         rgba(244, 240, 232, 0.1);
+  --border-mid:           rgba(244, 240, 232, 0.2);
+  --border-dark:          rgba(244, 240, 232, 0.35);
 
   --accent-primary:       var(--color-slate);
   --accent-secondary:     var(--color-pine);
@@ -155,28 +155,28 @@
 
   /* ── Cards ── */
   .card {
-    @apply bg-cream-tint border border-cream-accent rounded-none 
-           shadow-card transition-shadow duration-200 hover:shadow-card-md;
+    @apply bg-graphite-mid border border-white/10 rounded-2xl
+           shadow-card transition-all duration-300 hover:shadow-card-md hover:border-white/20;
   }
 
   .card-dark {
-    @apply bg-slate-dark text-cream border border-slate-accent
-           rounded-none shadow-slate;
+    @apply bg-graphite-mid text-cream border border-white/10
+           rounded-2xl shadow-slate;
   }
 
   /* ── Nav Link ── */
   .nav-link {
-    @apply text-sm font-medium text-graphite hover:text-slate
+    @apply text-sm font-medium text-cream/70 hover:text-cream
            transition-colors duration-200 relative
            after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px
-           after:bg-slate after:transition-all after:duration-200
+           after:bg-cream after:transition-all after:duration-200
            hover:after:w-full;
   }
 
   /* ── Tag / Badge ── */
   .tag {
     @apply inline-block px-2.5 py-0.5 text-2xs font-semibold
-           tracking-widest uppercase bg-cream-accent text-slate;
+           tracking-widest uppercase bg-white/10 text-cream/80;
   }
 
   .tag-pine {

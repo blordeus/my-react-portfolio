@@ -1,197 +1,133 @@
-import { Popover } from "@headlessui/react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import React from "react";
 import Image from "next/image";
-import Button from "../Button";
-// Local Data
 import data from "../../data/portfolio-updated.json";
 
-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
+const Header = ({ handleWorkScroll, handleAboutScroll, handleServicesScroll, handleContactScroll, isBlog }) => {
   const router = useRouter();
-  const { name, showBlog, showResume } = data;
+  const { name, showBlog } = data;
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
+
+  const close = () => setMenuOpen(false);
+
+  const navItems = isBlog
+    ? [
+        { label: "Home", action: () => { router.push("/"); close(); } },
+        ...(showBlog ? [{ label: "Blog", action: () => { router.push("/blog"); close(); } }] : []),
+        { label: "Contact", action: () => { window.open("mailto:imaginedbybryan@gmail.com"); close(); } },
+      ]
+    : [
+        { label: "Work", action: () => { handleWorkScroll?.(); close(); } },
+        { label: "About", action: () => { handleAboutScroll?.(); close(); } },
+        { label: "Services", action: () => { handleServicesScroll?.(); close(); } },
+        { label: "Contact", action: () => { handleContactScroll?.(); close(); } },
+        ...(showBlog ? [{ label: "Blog", action: () => { router.push("/blog"); close(); } }] : []),
+      ];
 
   return (
     <>
-      {/* Mobile Menu - Hidden on desktop */}
-      <Popover className="block lg:hidden mt-5">
-        {({ open }) => (
-          <>
-            <div className="flex items-center justify-between p-2">
-              <Image
-                className="h-6"
-                src="/images/my-logo-04.svg"
-                alt="My logo"
-                width={70}
-                height={70}
-                priority
-                onClick={() => router.push("/")}
-                style={{ cursor: "pointer" }}
-              />
-
-              <div className="flex items-center">
-                <Popover.Button>
-                  <Image
-                    className="h-5"
-                    src={`/images/${!open ? "menu.svg" : "cancel.svg"}`}
-                    alt={!open ? "Open menu" : "Close menu"}
-                    width={26}
-                    height={26}
-                    priority
-                  />
-                </Popover.Button>
-              </div>
-            </div>
-            <Popover.Panel
-              className="absolute right-0 z-10 w-11/12 p-4 bg-white shadow-md rounded-md"
-            >
-              {!isBlog ? (
-                <div className="grid grid-cols-1">
-                  <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleAboutScroll}>About</Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
-
-                  <Button
-                    onClick={() =>
-                      window.open("https://bryanlordeus.myportfolio.com")
-                    }
-                  >
-                    Creative Work
-                  </Button>
-
-                  <Button
-                    onClick={() =>
-                      window.open("https://casestudiesbybryan.myportfolio.com")
-                    }
-                  >
-                    Case Studies
-                  </Button>
-
-                  <Button
-                    onClick={() =>
-                      window.open("mailto:imaginedbybryan@gmail.com")
-                    }
-                  >
-                    Contact
-                  </Button>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1">
-                  <Button onClick={() => router.push("/")} classes="first:ml-1">
-                    Home
-                  </Button>
-                  {showBlog && (
-                    <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
-
-                  <Button
-                    onClick={() =>
-                      window.open("https://bryanlordeus.myportfolio.com")
-                    }
-                  >
-                    Creative Work
-                  </Button>
-
-                  <Button
-                    onClick={() =>
-                      window.open("https://casestudiesbybryan.myportfolio.com")
-                    }
-                  >
-                    Case Studies
-                  </Button>
-
-                  <Button
-                    onClick={() =>
-                      window.open("mailto:imaginedbybryan@gmail.com")
-                    }
-                  >
-                    Contact
-                  </Button>
-                </div>
-              )}
-            </Popover.Panel>
-          </>
-        )}
-      </Popover>
-
-      {/* Desktop Nav - Hidden on mobile */}
-      <div className="mt-10 hidden lg:flex flex-row items-center justify-between top-0 z-10 py-4">
-        <Image
-          className="h-12"
-          src="/images/my-logo-04.svg"
-          alt="My logo"
-          width={60}
-          height={60}
-          priority
+      {/* ── Top Bar ─────────────────────────────────────────────── */}
+      <header className="flex items-center justify-between px-5 py-5 lg:px-0 lg:py-8">
+        {/* Logo */}
+        <button
           onClick={() => router.push("/")}
-          style={{ cursor: "pointer" }}
-        />
-        {!isBlog ? (
-          <nav className="flex gap-8 items-center">
-            <button 
-              onClick={handleWorkScroll}
-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
+          className="focus:outline-none"
+          aria-label="Home"
+        >
+          <Image
+            src="/images/my-logo-04.svg"
+            alt="Bryan Lordeus logo"
+            width={52}
+            height={52}
+            priority
+            className="opacity-90 hover:opacity-100 transition-opacity duration-200 invert"
+          />
+        </button>
+
+        {/* Desktop nav */}
+        <nav className="hidden lg:flex items-center gap-8">
+          {navItems.map((item) => (
+            <button
+              key={item.label}
+              onClick={item.action}
+              className="text-sm font-medium text-cream/60 hover:text-cream tracking-wide transition-colors duration-200"
             >
-              Work
+              {item.label}
             </button>
-            <button 
-              onClick={handleAboutScroll}
-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
+          ))}
+        </nav>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMenuOpen(true)}
+          className="lg:hidden flex flex-col gap-1.5 p-1 focus:outline-none"
+          aria-label="Open menu"
+        >
+          <span className="block w-6 h-0.5 bg-cream rounded-full transition-all duration-200" />
+          <span className="block w-4 h-0.5 bg-cream rounded-full transition-all duration-200" />
+          <span className="block w-5 h-0.5 bg-cream rounded-full transition-all duration-200" />
+        </button>
+      </header>
+
+      {/* ── Mobile slide-in overlay ──────────────────────────────── */}
+      {/* Backdrop */}
+      <div
+        onClick={close}
+        className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      />
+
+      {/* Drawer */}
+      <div
+        className={`fixed top-0 right-0 z-50 h-full w-4/5 max-w-xs bg-graphite-mid border-l border-white/10 flex flex-col transition-transform duration-300 ease-in-out lg:hidden ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Drawer header */}
+        <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
+          <Image
+            src="/images/my-logo-04.svg"
+            alt="logo"
+            width={36}
+            height={36}
+            className="invert opacity-80"
+          />
+          <button onClick={close} className="focus:outline-none" aria-label="Close menu">
+            <svg className="w-6 h-6 text-cream/70 hover:text-cream transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Nav items */}
+        <nav className="flex flex-col gap-1 px-4 py-8 flex-1">
+          {navItems.map((item, i) => (
+            <button
+              key={item.label}
+              onClick={item.action}
+              className="text-left px-4 py-4 text-xl font-serif text-cream/80 hover:text-cream hover:bg-white/5 rounded-xl transition-all duration-200"
+              style={{ animationDelay: `${i * 60}ms` }}
             >
-              About
+              {item.label}
             </button>
-            {showBlog && (
-              <button 
-                onClick={() => router.push("/blog")}
-                className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
-              >
-                Blog
-              </button>
-            )}
-            <button 
-              onClick={() => window.open("https://bryanlordeus.myportfolio.com")}
-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
-            >
-              Creative Work
-            </button>
-            <button 
-              onClick={() => window.open("https://casestudiesbybryan.myportfolio.com")}
-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
-            >
-              Case Studies
-            </button>
-            <button 
-              onClick={() => window.open("mailto:imaginedbybryan@gmail.com")}
-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
-            >
-              Contact
-            </button>
-          </nav>
-        ) : (
-          <nav className="flex gap-8 items-center">
-            <button 
-              onClick={() => router.push("/")}
-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
-            >
-              Home
-            </button>
-            {showBlog && (
-              <button 
-                onClick={() => router.push("/blog")}
-                className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
-              >
-                Blog
-              </button>
-            )}
-            <button 
-              onClick={() => window.open("mailto:imaginedbybryan@gmail.com")}
-              className="text-base font-medium text-graphite hover:text-slate transition-colors duration-200"
-            >
-              Contact
-            </button>
-          </nav>
-        )}
+          ))}
+        </nav>
+
+        {/* Drawer footer */}
+        <div className="px-8 py-6 border-t border-white/10">
+          <p className="text-xs text-cream/30 tracking-widest uppercase">Imagined by Bryan</p>
+        </div>
       </div>
     </>
   );

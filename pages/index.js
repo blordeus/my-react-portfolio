@@ -1,4 +1,3 @@
-// pages/index.js - With About Section
 import { useRef, useState } from "react";
 import Header from "../components/Header";
 import Socials from "../components/Socials";
@@ -7,43 +6,48 @@ import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer";
 import Head from "next/head";
-import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
-import ProjectGallery from "../components/ProjectGallery"; 
+import ProjectGallery from "../components/ProjectGallery";
 import ProjectFilter from "../components/ProjectFilter";
 import BehanceBanner from "../components/BehanceBanner";
-
-// Local Data
 import data from "../data/portfolio-updated.json";
 
-export default function Home() {
-  // State for filtering
-  const [activeCategory, setActiveCategory] = useState('all');
+const services = [
+  {
+    number: "01",
+    title: "Web Development",
+    description: "Translating designs into fast, responsive web experiences — from marketing sites to full-stack applications.",
+    tags: ["React", "Next.js", "Tailwind"],
+  },
+  {
+    number: "02",
+    title: "UI/UX Design",
+    description: "Designing intuitive interfaces that guide users naturally and make complex things feel simple.",
+    tags: ["Figma", "Prototyping", "Design Systems"],
+  },
+  {
+    number: "03",
+    title: "Digital Marketing",
+    description: "Content strategy, social media management, and creative campaigns that build audiences and drive results.",
+    tags: ["Social Media", "Branding", "Strategy"],
+  },
+];
 
-  // Ref
+export default function Home() {
+  const [activeCategory, setActiveCategory] = useState("all");
+
   const workRef = useRef();
   const aboutRef = useRef();
+  const servicesRef = useRef();
+  const contactRef = useRef();
   const textOne = useRef();
   const textTwo = useRef();
   const textThree = useRef();
   const textFour = useRef();
 
-  // Handling Scroll
-  const handleWorkScroll = () => {
-    window.scrollTo({
-      top: workRef.current.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
-
-  const handleAboutScroll = () => {
-    window.scrollTo({
-      top: aboutRef.current.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
+  const scrollTo = (ref) => {
+    window.scrollTo({ top: ref.current.offsetTop - 20, behavior: "smooth" });
   };
 
   useIsomorphicLayoutEffect(() => {
@@ -55,88 +59,151 @@ export default function Home() {
   }, []);
 
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
+    <div className={`relative bg-graphite-black min-h-screen ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <Head>
         <title>{data.name}</title>
       </Head>
 
-      <div className="gradient-circle"></div>
-      <div className="gradient-circle-bottom"></div>
-
-      <div className="container mx-auto mb-10">
+      <div className="max-w-5xl mx-auto px-5 lg:px-0">
         <Header
-          handleWorkScroll={handleWorkScroll}
-          handleAboutScroll={handleAboutScroll}
+          handleWorkScroll={() => scrollTo(workRef)}
+          handleAboutScroll={() => scrollTo(aboutRef)}
+          handleServicesScroll={() => scrollTo(servicesRef)}
+          handleContactScroll={() => scrollTo(contactRef)}
         />
-        <div className="laptop:mt-16 mt-12">
-          <div className="mt-5">
+
+        {/* ── Hero ──────────────────────────────────────────────── */}
+        <section className="pt-10 pb-20 lg:pt-16 lg:pb-28">
+          <div className="max-w-3xl">
+            <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-6">
+              Available for freelance
+            </span>
             <h1
               ref={textOne}
-              className="text-6xl tablet:text-5xl laptop:text-6xl laptopl:text-7xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
+              className="text-5xl lg:text-7xl font-serif text-cream leading-tight mb-2"
             >
               {data.headerTaglineOne}
             </h1>
             <h1
               ref={textTwo}
-              className="text-5xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-4xl lg:text-6xl font-serif text-cream/80 leading-tight mb-2"
             >
               {data.headerTaglineTwo}
             </h1>
-            <h1
-              ref={textThree}
-              className="text-3xl tablet:text-3xl laptop:text-4xl laptopl:text-5xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineThree}
-            </h1>
-            <h1
-              ref={textFour}
-              className="text-3xl tablet:text-3xl laptop:text-4xl laptopl:text-5xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineFour}
-            </h1>
+            {data.headerTaglineThree && (
+              <h2
+                ref={textThree}
+                className="text-2xl lg:text-3xl font-sans font-light text-cream/50 mt-4 mb-2"
+              >
+                {data.headerTaglineThree}
+              </h2>
+            )}
+            {data.headerTaglineFour && (
+              <p
+                ref={textFour}
+                className="text-lg text-cream/40 mt-1"
+              >
+                {data.headerTaglineFour}
+              </p>
+            )}
           </div>
 
-          <Socials className="mt-4 laptop:mt-4" />
-        </div>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <button
+              onClick={() => scrollTo(workRef)}
+              className="bg-cream text-graphite-black px-6 py-3 rounded-xl text-sm font-semibold hover:bg-cream-accent transition-colors duration-200"
+            >
+              View Work
+            </button>
+            <button
+              onClick={() => scrollTo(contactRef)}
+              className="border border-white/20 text-cream/70 px-6 py-3 rounded-xl text-sm font-semibold hover:border-white/40 hover:text-cream transition-all duration-200"
+            >
+              Get in Touch
+            </button>
+          </div>
 
-        {/* About Section */}
+          <div className="mt-8">
+            <Socials />
+          </div>
+        </section>
+
+        {/* ── About ─────────────────────────────────────────────── */}
         <div ref={aboutRef}>
           <About aboutContent={data.aboutContent} />
         </div>
-        
-        <div className="mt-16 laptop:mt-16 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-5xl laptop:text-5xl font-serif text-center mb-8">Web Development</h1>
-          
-          {/* Filter Component */}
-          <ProjectFilter 
+
+        {/* ── Services ──────────────────────────────────────────── */}
+        <section ref={servicesRef} className="py-20 lg:py-28 border-t border-white/10">
+          <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-4">
+            Services
+          </span>
+          <h2 className="text-4xl lg:text-5xl font-serif text-cream mb-12">
+            What I do.
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {services.map((s) => (
+              <div
+                key={s.number}
+                className="group p-6 lg:p-8 rounded-2xl bg-graphite-mid border border-white/10 hover:border-white/20 transition-all duration-300"
+              >
+                <span className="block text-xs font-semibold tracking-widest text-olive-tint mb-6">
+                  {s.number}
+                </span>
+                <h3 className="text-xl font-serif text-cream mb-3">{s.title}</h3>
+                <p className="text-sm text-cream/55 leading-relaxed mb-6">{s.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {s.tags.map((tag) => (
+                    <span key={tag} className="px-2.5 py-1 text-2xs font-medium bg-white/8 text-cream/50 rounded-full border border-white/10">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── Work ──────────────────────────────────────────────── */}
+        <section ref={workRef} className="py-20 lg:py-28 border-t border-white/10">
+          <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-4">
+            Work
+          </span>
+          <h2 className="text-4xl lg:text-5xl font-serif text-cream mb-10">
+            Web Development
+          </h2>
+
+          <ProjectFilter
             categories={data.projectCategories}
             activeCategory={activeCategory}
             onFilterChange={setActiveCategory}
           />
-          
-          {/* Project Gallery */}
-          <div className="mt-6 laptop:mt-8">
-            <ProjectGallery 
-              projects={data.projects} 
+
+          <div className="mt-6">
+            <ProjectGallery
+              projects={data.projects}
               activeCategory={activeCategory}
             />
           </div>
-        </div>
+        </section>
 
-        {/* Behance Banner for Marketing Work */}
+        {/* ── Behance ───────────────────────────────────────────── */}
         <BehanceBanner behanceUrl={data.behanceUrl} />
 
-        {/* This button should not go into production */}
+        {/* Dev-only edit button */}
         {process.env.NODE_ENV === "development" && (
-          <div className="fixed bottom-5 right-5">
+          <div className="fixed bottom-5 right-5 z-50">
             <Link href="/edit">
-              <Button type="primary">Edit Data</Button>
+              <a className="bg-cream text-graphite-black px-4 py-2 rounded-xl text-sm font-semibold">
+                Edit Data
+              </a>
             </Link>
           </div>
         )}
-     
-        <Footer />
+
+        <Footer contactRef={contactRef} />
       </div>
     </div>
   );

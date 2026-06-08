@@ -1,19 +1,15 @@
-// components/ProjectFilter.js
 export default function ProjectFilter({ categories, activeCategory, onFilterChange }) {
   return (
-    <div className="flex flex-wrap justify-center gap-3 mb-8 laptop:mb-12">
+    <div className="flex flex-wrap justify-center gap-2 mb-8">
       {categories.map((category) => (
         <button
           key={category.id}
           onClick={() => onFilterChange(category.id)}
-          className={`
-            px-4 py-2 rounded-lg transition-all duration-300 text-sm laptop:text-base font-medium
-            ${
-              activeCategory === category.id
-                ? 'bg-slate text-cream shadow-lg transform scale-105'
-                : 'bg-cream-accent text-slate hover:bg-slate hover:text-cream'
-            }
-          `}
+          className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            activeCategory === category.id
+              ? "bg-cream text-graphite-black"
+              : "bg-white/8 text-cream/60 border border-white/10 hover:border-white/25 hover:text-cream"
+          }`}
         >
           {category.name}
         </button>
