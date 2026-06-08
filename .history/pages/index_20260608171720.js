@@ -178,7 +178,7 @@ export default function Home() {
         </section>
 
         {/* ── Work ──────────────────────────────────────────────── */}
-        <section ref={workRef} className="py-14 lg:pb-16 pt-12 border-t border-white/10">
+        <section ref={workRef} className="py-14 lg:py-20 border-t border-white/10">
           <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-3">
             Work
           </span>

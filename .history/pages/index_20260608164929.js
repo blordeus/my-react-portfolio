@@ -74,70 +74,61 @@ export default function Home() {
         />
 
         {/* ── Hero ──────────────────────────────────────────────── */}
-<section className="pt-10 pb-16 lg:pt-12 lg:pb-16 border-b border-white/10">
-  <div className="flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-16">
+        <section className="pt-10 pb-16 lg:pt-14 lg:pb-20">
+          <div className="max-w-3xl">
+            <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-4">
+              Available for freelance
+            </span>
+            <h1
+              ref={textOne}
+              className="text-5xl lg:text-6xl font-serif text-cream leading-tight mb-1"
+            >
+              {data.headerTaglineOne}
+            </h1>
+            <h1
+              ref={textTwo}
+              className="text-4xl lg:text-5xl font-serif text-cream/80 leading-tight mb-1"
+            >
+              {data.headerTaglineTwo}
+            </h1>
+            {data.headerTaglineThree && (
+              <h2
+                ref={textThree}
+                className="text-xl lg:text-2xl font-sans font-light text-cream/50 mt-3 mb-1"
+              >
+                {data.headerTaglineThree}
+              </h2>
+            )}
+            {data.headerTaglineFour && (
+              <p
+                ref={textFour}
+                className="text-base text-cream/40 mt-1"
+              >
+                {data.headerTaglineFour}
+              </p>
+            )}
+          </div>
 
-    {/* Left — headline + CTAs */}
-    <div className="lg:w-1/2">
-      <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-4">
-        Available for freelance
-      </span>
-      <h1
-        ref={textOne}
-        className="text-5xl lg:text-6xl font-serif text-cream leading-tight mb-1"
-      >
-        {data.headerTaglineOne}
-      </h1>
-      <h1
-        ref={textTwo}
-        className="text-4xl lg:text-5xl font-serif text-cream/80 leading-tight"
-      >
-        {data.headerTaglineTwo}
-      </h1>
+          <div className="mt-7 flex flex-wrap items-center gap-3">
+            <button
+              onClick={() => scrollTo(workRef)}
+              className="bg-cream text-graphite-black px-6 py-3 rounded-xl text-sm font-semibold hover:bg-cream-accent transition-colors duration-200"
+            >
+              View Work
+            </button>
+            <button
+              onClick={() => scrollTo(contactRef)}
+              className="border border-white/20 text-cream/70 px-6 py-3 rounded-xl text-sm font-semibold hover:border-white/40 hover:text-cream transition-all duration-200"
+            >
+              Get in Touch
+            </button>
+          </div>
 
-      <div className="mt-8 flex flex-wrap items-center gap-3">
-        <button
-          onClick={() => scrollTo(workRef)}
-          className="bg-cream text-graphite-black px-6 py-3 rounded-xl text-sm font-semibold hover:bg-cream-accent transition-colors duration-200"
-        >
-          View Work
-        </button>
-        <button
-          onClick={() => scrollTo(contactRef)}
-          className="border border-white/20 text-cream/70 px-6 py-3 rounded-xl text-sm font-semibold hover:border-white/40 hover:text-cream transition-all duration-200"
-        >
-          Get in Touch
-        </button>
-      </div>
-    </div>
+          <div className="mt-5">
+            <Socials />
+          </div>
+        </section>
 
-    {/* Right — description card + socials */}
-    <div className="lg:w-1/2 lg:pb-2">
-      <div className="p-6 rounded-2xl bg-graphite-mid border border-white/10 flex flex-col gap-5">
-        {data.headerTaglineThree && (
-          <p
-            ref={textThree}
-            className="text-lg font-sans font-light text-cream/70 leading-relaxed"
-          >
-            {data.headerTaglineThree}
-          </p>
-        )}
-        {data.headerTaglineFour && (
-          <p
-            ref={textFour}
-            className="text-sm text-cream/40 leading-relaxed"
-          >
-            {data.headerTaglineFour}
-          </p>
-        )}
-        <div className="pt-2 border-t border-white/10">
-          <Socials />
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
         
 
         {/* ── About ─────────────────────────────────────────────── */}
@@ -146,7 +137,7 @@ export default function Home() {
         </div>
 
         {/* ── Services ──────────────────────────────────────────── */}
-        <section ref={servicesRef} className="py-14 lg:pb-16 pt-12 border-t border-white/10">
+        <section ref={servicesRef} className="py-14 lg:py-20 border-t border-white/10">
           <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-3">
             Services
           </span>
@@ -178,7 +169,7 @@ export default function Home() {
         </section>
 
         {/* ── Work ──────────────────────────────────────────────── */}
-        <section ref={workRef} className="py-14 lg:pb-16 pt-12 border-t border-white/10">
+        <section ref={workRef} className="py-14 lg:py-20 border-t border-white/10">
           <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-3">
             Work
           </span>

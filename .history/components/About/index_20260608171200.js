@@ -2,7 +2,7 @@ export default function About({ aboutContent = [] }) {
   if (!aboutContent || aboutContent.length === 0) return null;
 
   return (
-    <section className="py-14 lg:pb-16 pt-12 border-t border-white/10">
+    <section className="py-14 lg:pb-20 pt-4 ">
       <div className="max-w-3xl mx-auto px-2 lg:px-0">
         <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-3">
           About

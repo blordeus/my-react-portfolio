@@ -1,6 +1,6 @@
 export default function BehanceBanner({ behanceUrl }) {
   return (
-    <div className="mt-10 lg:mt-14 mb-20 px-2 lg:px-0">
+    <div className="mt-10 lg:mt-14 mb-16 px-2 lg:px-0">
       <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-graphite-mid p-8 lg:p-12 text-center">
         <div className="absolute inset-0 bg-gradient-to-br from-pine-deep/30 via-transparent to-slate-dark/30 pointer-events-none" />
         <div className="relative z-10">

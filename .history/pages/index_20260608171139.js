@@ -74,7 +74,7 @@ export default function Home() {
         />
 
         {/* ── Hero ──────────────────────────────────────────────── */}
-<section className="pt-10 pb-16 lg:pt-12 lg:pb-16 border-b border-white/10">
+<section className="pt-10 pb-16 lg:pt-14 lg:pb-20 border-b border-white/10">
   <div className="flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-16">
 
     {/* Left — headline + CTAs */}
@@ -146,7 +146,7 @@ export default function Home() {
         </div>
 
         {/* ── Services ──────────────────────────────────────────── */}
-        <section ref={servicesRef} className="py-14 lg:pb-16 pt-12 border-t border-white/10">
+        <section ref={servicesRef} className="py-14 lg:pb-20 pt-4 border-t border-white/10">
           <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-3">
             Services
           </span>
@@ -178,7 +178,7 @@ export default function Home() {
         </section>
 
         {/* ── Work ──────────────────────────────────────────────── */}
-        <section ref={workRef} className="py-14 lg:pb-16 pt-12 border-t border-white/10">
+        <section ref={workRef} className="py-14 lg:py-20 border-t border-white/10">
           <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-3">
             Work
           </span>

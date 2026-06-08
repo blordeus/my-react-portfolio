@@ -26,7 +26,7 @@ const Footer = ({ contactRef }) => {
   return (
     <>
       {/* ── Contact Section ─────────────────────────────────────── */}
-      <section ref={contactRef} className="py-14 lg:pb-16 pt-12 border-t border-white/10">
+      <section ref={contactRef} className="py-14 lg:py-20 border-b border-white/10">
         <div className="max-w-5xl mx-auto px-2 lg:px-0">
           <div className="grid lg:grid-cols-2 gap-10 items-start">
             {/* Left — CTA copy */}
