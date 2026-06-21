@@ -38,7 +38,7 @@ const Footer = ({ contactRef }) => {
                 Let&apos;s talk.
               </h2>
               <p className="text-sm text-cream/60 mb-6 max-w-sm">
-                Freelance work, full-time roles, or a question about something I built. I respond within a day.
+                Open for freelance projects — web development, design systems, and digital experiences. Reach out and let&apos;s talk.
               </p>
 
               {/* Social links */}

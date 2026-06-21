@@ -12,7 +12,7 @@
   "aboutContent": [
     "I plan campaigns and build the sites that run them. As a digital marketer who codes, I create the content, strategy, and technical foundation brands need to grow.",
     "Over the past 8 years, I've helped churches, coaches, and small businesses grow their online presence through strategic content, social media management, and custom websites.",
-    "Open to freelance projects and full-time marketing or digital asset management roles.",
+    "Open to freelance projects and full-time marketing or digital ass.",
     "Based in South Florida. Open to remote opportunities."
   ],
   "socials": [
@@ -32,7 +32,7 @@
       "id": "photosnap-009",
       "title": "Photosnap - Multi-Page Website",
       "description": "Next.js | TypeScript | Tailwind CSS",
-      "category": "landing-pages",
+      "category": "client-sites",
       "tags": [
         "Next.js",
         "Marketing Site",
@@ -54,7 +54,7 @@
         "Authentication"
       ],
       "results": "Full-stack app with user authentication, file uploads, and drag-and-drop UI",
-      "imageSrc": "https://i.ibb.co/W414vyR6/Fire-Shot-Capture-002-Create-Next-App-linksharing-app-five-vercel-app.png",
+      "imageSrc": "https://via.placeholder.com/800x600/435066/F4F0E8?text=Link+Sharing",
       "url": "https://linksharing-app-five.vercel.app",
       "sourceURL": "https://github.com/blordeus/linksharing-app",
       "showSource": true
@@ -78,7 +78,7 @@
       "id": "blog-006",
       "title": "Personal Blog",
       "description": "React | Next.js | MDX",
-      "category": "web-apps",
+      "category": "client-sites",
       "tags": [
         "React",
         "Blog",
@@ -153,7 +153,7 @@
       "id": "myteam-001",
       "title": "myteam - Multi-Page Website",
       "description": "React | Next.js | Tailwind CSS",
-      "category": "web-apps",
+      "category": "client-sites",
       "tags": [
         "React",
         "Next.js",
@@ -360,17 +360,17 @@
     {
       "id": "1",
       "title": "Front-End Development",
-      "description": "React and Next.js sites that load fast and hold up on mobile. Marketing pages, full-stack apps, and the client portals in between."
+      "description": "I can assist with the creation and development of website ideas using a variety of programming languages and website builders."
     },
     {
       "id": "2",
-      "title": "Digital Marketing",
-      "description": "Social calendars, email sequences, and campaign strategy for businesses that are in need of strategy and results."
+      "title": "Graphic Design",
+      "description": "With over 10 years of experience, I design key brand elements like logos, color schemes, and typography to make your brand stand out."
     },
     {
       "id": "3",
       "title": "UI/UX Design",
-      "description": "Wireframes in Figma converted into interfaces that turn visitors into customers."
+      "description": "I create intuitive and engaging interfaces, optimizing user experience to enhance overall product satisfaction."
     }
   ],
   "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",

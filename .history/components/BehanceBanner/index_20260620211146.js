@@ -11,7 +11,7 @@ export default function BehanceBanner({ behanceUrl }) {
             Marketing & Social Media
           </h2>
           <p className="text-base text-cream/60 mb-8 max-w-xl mx-auto">
-            Social campaigns, brand systems, and design work — view the full creative portfolio on Behance.
+            Social campaigns, brand s, and social media management — view the full creative portfolio on Behance.
           </p>
           <a
             href={behanceUrl}

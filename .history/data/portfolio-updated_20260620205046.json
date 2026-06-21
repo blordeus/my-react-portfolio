@@ -32,7 +32,7 @@
       "id": "photosnap-009",
       "title": "Photosnap - Multi-Page Website",
       "description": "Next.js | TypeScript | Tailwind CSS",
-      "category": "landing-pages",
+      "category": "client-sites",
       "tags": [
         "Next.js",
         "Marketing Site",
@@ -54,7 +54,7 @@
         "Authentication"
       ],
       "results": "Full-stack app with user authentication, file uploads, and drag-and-drop UI",
-      "imageSrc": "https://i.ibb.co/W414vyR6/Fire-Shot-Capture-002-Create-Next-App-linksharing-app-five-vercel-app.png",
+      "imageSrc": "https://via.placeholder.com/800x600/435066/F4F0E8?text=Link+Sharing",
       "url": "https://linksharing-app-five.vercel.app",
       "sourceURL": "https://github.com/blordeus/linksharing-app",
       "showSource": true
@@ -78,7 +78,7 @@
       "id": "blog-006",
       "title": "Personal Blog",
       "description": "React | Next.js | MDX",
-      "category": "web-apps",
+      "category": "client-sites",
       "tags": [
         "React",
         "Blog",
@@ -153,7 +153,7 @@
       "id": "myteam-001",
       "title": "myteam - Multi-Page Website",
       "description": "React | Next.js | Tailwind CSS",
-      "category": "web-apps",
+      "category": "client-sites",
       "tags": [
         "React",
         "Next.js",
@@ -365,12 +365,12 @@
     {
       "id": "2",
       "title": "Digital Marketing",
-      "description": "Social calendars, email sequences, and campaign strategy for businesses that are in need of strategy and results."
+      "description": ""
     },
     {
       "id": "3",
       "title": "UI/UX Design",
-      "description": "Wireframes in Figma converted into interfaces that turn visitors into customers."
+      "description": "Wireframes in Figma that turn into interfaces people don't have to think about. Less decoration, more usability."
     }
   ],
   "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
