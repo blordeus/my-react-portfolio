@@ -7,9 +7,9 @@ export default function About({ aboutContent = [] }) {
         <span className="block text-xs font-semibold tracking-widest uppercase text-olive-tint mb-3">
           About
         </span>
-        <h2 className="text-3xl lg:text-4xl font-serif text-cream mb-6 leading-tight">
-          I turn stories into digital experiences.
-        </h2>
+        {/* <h2 className="text-3xl lg:text-4xl font-serif text-cream mb-6 leading-tight">
+          The man behind the work.
+        </h2> */}
         <div className="space-y-3">
           {aboutContent.map((paragraph, index) => (
             <p key={index} className="text-base lg:text-lg text-cream/70 leading-relaxed">

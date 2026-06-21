@@ -8,7 +8,7 @@ export default function About({ aboutContent = [] }) {
           About
         </span>
         <h2 className="text-3xl lg:text-4xl font-serif text-cream mb-6 leading-tight">
-          I turn stories into digital experiences.
+          The man behind the work.
         </h2>
         <div className="space-y-3">
           {aboutContent.map((paragraph, index) => (

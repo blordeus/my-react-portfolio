@@ -17,19 +17,19 @@ const services = [
   {
     number: "01",
     title: "Web Development",
-    description: "React and Next.js sites that load fast and hold up on mobile; translating designs into fast, responsive web experiences.",
+    description: "React and Next.js sites that load fast and hold up on mobile. Translating designs into fast, responsive web experiences — from marketing sites to full-stack applications.",
     tags: ["React", "Next.js", "Tailwind"],
   },
   {
     number: "02",
     title: "UI/UX Design",
-    description: "Transforming wireframes in Figma to interfaces that turn visitors into customers.",
+    description: "Designing intuitive interfaces that guide users naturally and make complex things feel simple.",
     tags: ["Figma", "Prototyping", "Design Systems"],
   },
   {
     number: "03",
     title: "Digital Marketing",
-    description: "Social calendars, email sequences, and campaign strategy for businesses in need of strategy and results.",
+    description: "Content strategy, social media management, and creative campaigns that build audiences and drive results.",
     tags: ["Social Media", "Branding", "Strategy"],
   },
 ];
@@ -125,12 +125,12 @@ export default function Home() {
         {data.headerTaglineFour && (
           <p
             ref={textFour}
-            className="text-sm text-cream/40 leading-relaxed pb-2"
+            className="text-sm text-cream/40 leading-relaxed"
           >
             {data.headerTaglineFour}
           </p>
         )}
-        <div className="pt-3 border-t border-white/10">
+        <div className="pt-2 border-t border-white/10">
           <Socials />
         </div>
       </div>

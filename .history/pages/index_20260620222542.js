@@ -23,13 +23,13 @@ const services = [
   {
     number: "02",
     title: "UI/UX Design",
-    description: "Transforming wireframes in Figma to interfaces that turn visitors into customers.",
+    description: "Transforming wireframes in FIgma into interfaces that turn visitors into customers. wireframes in Figma that turn into interfaces which convert visitors to customers.",
     tags: ["Figma", "Prototyping", "Design Systems"],
   },
   {
     number: "03",
     title: "Digital Marketing",
-    description: "Social calendars, email sequences, and campaign strategy for businesses in need of strategy and results.",
+    description: "Content strategy, social media management, and creative campaigns that build audiences and drive results.",
     tags: ["Social Media", "Branding", "Strategy"],
   },
 ];
@@ -125,12 +125,12 @@ export default function Home() {
         {data.headerTaglineFour && (
           <p
             ref={textFour}
-            className="text-sm text-cream/40 leading-relaxed pb-2"
+            className="text-sm text-cream/40 leading-relaxed"
           >
             {data.headerTaglineFour}
           </p>
         )}
-        <div className="pt-3 border-t border-white/10">
+        <div className="pt-2 border-t border-white/10">
           <Socials />
         </div>
       </div>

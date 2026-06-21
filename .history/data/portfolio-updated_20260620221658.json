@@ -2,15 +2,15 @@
   "name": "Bryan Lordeus",
   "headerTaglineOne": "Hello,",
   "headerTaglineTwo": "I'm Bryan Lordeus",
-  "headerTaglineThree": "digital marketer and front-end developer",
-  "headerTaglineFour": "I build the campaigns and the sites that run them to help businesses communicate their stories.",
+  "headerTaglineThree": "digital marketer and front-end developer helping brands grow",
+  "headerTaglineFour": "through strategic content and custom-built web experiences.",
   "showCursor": true,
   "showBlog": false,
   "darkMode": false,
   "showResume": false,
   "behanceUrl": "https://www.behance.net/bryanlordeus",
   "aboutContent": [
-    "As a developer with marketing experience, I provide the content, strategy, and technical foundation necessary for brands to grow. I plan campaigns and build the sites that run them.",
+    "I plan campaigns and build the sites that run them. As a digital marketer who codes, I create the content, strategy, and technical foundation brands need to grow.",
     "Over the past 8 years, I've helped churches, coaches, and small businesses grow their online presence through strategic content, social media management, and custom websites.",
     "Open to freelance projects and full-time marketing or digital asset management roles.",
     "Based in South Florida. Open to remote opportunities."
@@ -355,65 +355,5 @@
       "sourceURL": "https://github.com/blordeus/expenses-chart-component-main",
       "showSource": true
     }
-  ],
-  "services": [
-    {
-      "id": "1",
-      "title": "Front-End Development",
-      "description": "React and Next.js sites that load fast and hold up on mobile. Marketing pages, full-stack apps, and the client portals in between."
-    },
-    {
-      "id": "2",
-      "title": "Digital Marketing",
-      "description": "Social calendars, email sequences, and campaign strategy for businesses that are in need of strategy and results."
-    },
-    {
-      "id": "3",
-      "title": "UI/UX Design",
-      "description": "Wireframes in Figma converted into interfaces that turn visitors into customers."
-    }
-  ],
-  "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  "resume": {
-    "tagline": "Front End Developer | Graphic Designer | Writer",
-    "description": "Experienced front-end developer and web designer with 4 years of expertise in crafting and editing interactive websites using HTML, CSS, JavaScript, and React. Proficient in graphic design and writing, I am dedicated to creating seamless user experiences and bringing websites to life with a keen eye for detail and creativity.",
-    "experiences": [
-      {
-        "id": "d495c23b-4f65-479a-9b8a-cfbc1c089724",
-        "dates": "October 2021 - October 2022",
-        "type": "Freelance",
-        "position": "Copywriter at Purple Tree Coaching & Consulting",
-        "bullets": "Proofread content and wrote copy for social media channels and e-marketing materials., Enhanced online visibility through SEO copywriting."
-      },
-      {
-        "id": "1",
-        "dates": "January 2021 - Present",
-        "type": "Freelance",
-        "position": "Web Designer at Brookins Goldens",
-        "bullets": "Edited the client's website using Squarespace.,  Optimizing website performance and improving user experience."
-      },
-      {
-        "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
-        "dates": "March 2021 - September 2022",
-        "type": "Freelance",
-        "position": "Content Creator at Riverside Church",
-        "bullets": "Developed copy and blog content for the website., Created visual content for Instagram and Facebook accounts."
-      },
-      {
-        "id": "d495c23b-4f65-479a-9b8a-cfbc1c089726",
-        "dates": "December 2019 - March 2021",
-        "type": "Freelance",
-        "position": "Web & App Designer at Riverside Church",
-        "bullets": "Prevented website crashes and errors by updating the front-end code and troubleshooting issues using HTML and CSS., Designed engaging and responsive landing pages using WordPress."
-      }
-    ],
-    "education": {
-      "universityName": "University of South Florida",
-      "universityDate": "2014-2016",
-      "universityPara": "English, with a concentration in Professional Writing, Rhetoric, and Technology" 
-    },
-    "languages": ["Javascript", "HTML5", "CSS", "React"],
-    "frameworks": ["React", "Bootstrap", "Vue", "Tailwindcss", "Chakra Ui"],
-    "others": ["Figma", "Sketch", "WordPress", "Squarespace", "Adobe Creative Suite", "Canva", "Wix", "Webflow"]
-  }
+  ]
 }

@@ -130,7 +130,7 @@ export default function Home() {
             {data.headerTaglineFour}
           </p>
         )}
-        <div className="pt-3 border-t border-white/10">
+        <div className="pt-4 border-t border-white/10">
           <Socials />
         </div>
       </div>

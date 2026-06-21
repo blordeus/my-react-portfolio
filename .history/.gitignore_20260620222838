@@ -18,7 +18,6 @@
 # misc
 .DS_Store
 *.pem
-*.patch
 
 # debug
 npm-debug.log*

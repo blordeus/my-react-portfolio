@@ -29,7 +29,7 @@ const services = [
   {
     number: "03",
     title: "Digital Marketing",
-    description: "Social calendars, email sequences, and campaign strategy for businesses in need of strategy and results.",
+    description: "Social calendars, email sequences, and campaign strategy for businesses that are in need of strategy and results.",
     tags: ["Social Media", "Branding", "Strategy"],
   },
 ];
@@ -125,12 +125,12 @@ export default function Home() {
         {data.headerTaglineFour && (
           <p
             ref={textFour}
-            className="text-sm text-cream/40 leading-relaxed pb-2"
+            className="text-sm text-cream/40 leading-relaxed"
           >
             {data.headerTaglineFour}
           </p>
         )}
-        <div className="pt-3 border-t border-white/10">
+        <div className="pt-2 border-t border-white/10">
           <Socials />
         </div>
       </div>

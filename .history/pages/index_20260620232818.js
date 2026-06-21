@@ -125,12 +125,12 @@ export default function Home() {
         {data.headerTaglineFour && (
           <p
             ref={textFour}
-            className="text-sm text-cream/40 leading-relaxed pb-2"
+            className="text-sm text-cream/40 leading-relaxed pb-4"
           >
             {data.headerTaglineFour}
           </p>
         )}
-        <div className="pt-3 border-t border-white/10">
+        <div className="pt-2 border-t border-white/10">
           <Socials />
         </div>
       </div>

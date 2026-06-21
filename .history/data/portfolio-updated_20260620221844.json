@@ -2,15 +2,15 @@
   "name": "Bryan Lordeus",
   "headerTaglineOne": "Hello,",
   "headerTaglineTwo": "I'm Bryan Lordeus",
-  "headerTaglineThree": "digital marketer and front-end developer",
-  "headerTaglineFour": "I build the campaigns and the sites that run them to help businesses communicate their stories.",
+  "headerTaglineThree": "digital marketer and front-end developer helping brands grow",
+  "headerTaglineFour": "through strategic content and custom-built web experiences.",
   "showCursor": true,
   "showBlog": false,
   "darkMode": false,
   "showResume": false,
   "behanceUrl": "https://www.behance.net/bryanlordeus",
   "aboutContent": [
-    "As a developer with marketing experience, I provide the content, strategy, and technical foundation necessary for brands to grow. I plan campaigns and build the sites that run them.",
+    "I plan campaigns and build the sites that run them. As a digital marketer who codes, I create the content, strategy, and technical foundation brands need to grow.",
     "Over the past 8 years, I've helped churches, coaches, and small businesses grow their online presence through strategic content, social media management, and custom websites.",
     "Open to freelance projects and full-time marketing or digital asset management roles.",
     "Based in South Florida. Open to remote opportunities."
@@ -354,23 +354,6 @@
       "url": "https://blordeus.github.io/expenses-chart-component-main/",
       "sourceURL": "https://github.com/blordeus/expenses-chart-component-main",
       "showSource": true
-    }
-  ],
-  "services": [
-    {
-      "id": "1",
-      "title": "Front-End Development",
-      "description": "React and Next.js sites that load fast and hold up on mobile. Marketing pages, full-stack apps, and the client portals in between."
-    },
-    {
-      "id": "2",
-      "title": "Digital Marketing",
-      "description": "Social calendars, email sequences, and campaign strategy for businesses that are in need of strategy and results."
-    },
-    {
-      "id": "3",
-      "title": "UI/UX Design",
-      "description": "Wireframes in Figma converted into interfaces that turn visitors into customers."
     }
   ],
   "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
